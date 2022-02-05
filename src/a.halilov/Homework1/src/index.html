@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <title>ДЗ 1</title>
 </head>
 <body>
@@ -18,7 +21,7 @@
                     <div class="line"></div>
                 </div>
                 <div class="head_menu_person">
-                    <div class="bell"> <img src="img/bell.png" alt="bell"></div>
+                    <div class="bell"> <img src="img/notifications_white_24dp.svg" alt="bell"> </div>
                     <div class="person"> <img src="img/64kS.gif" alt="Kerry"></div>
                 </div>
             </div>
@@ -26,7 +29,7 @@
 
 
         <div class="month">
-            October 2018 &#8595
+            October 2018 <img src="img/expand_more_black_24dp.svg" alt="down">
         </div>
 
         <div class="calendar_days">
@@ -36,32 +39,32 @@
             <div class="days">3 Wed</div>
             <div class="days">4 Thu</div>
             <div class="days">5 Fri</div>
-            <div class="days">6</div>
-            <div class="days">7</div>
-            <div class="days">8</div>
-            <div class="days">9</div>
-            <div class="days">10</div>
-            <div class="days">11</div>
-            <div class="days">12</div>
-            <div class="days">13</div>
-            <div class="days">14</div>
-            <div class="days">15</div>
-            <div class="days">16</div>
-            <div class="days">17</div>
-            <div class="days">18</div>
-            <div class="days">19</div>
-            <div class="days">20</div>
-            <div class="days">21</div>
-            <div class="days">22</div>
-            <div class="days">23</div>
-            <div class="days">24</div>
-            <div class="days">25</div>
-            <div class="days">26</div>
-            <div class="days">27</div>
-            <div class="days">28</div>
-            <div class="days">29</div>
-            <div class="days">30</div>
-            <div class="days">31</div>
+            <div class="days">6 Sut</div>
+            <div class="days">7 Sun</div>
+            <div class="days">8 Mon</div>
+            <div class="days">9 Tue</div>
+            <div class="days">10 Wed</div>
+            <div class="days">11 Thu</div>
+            <div class="days">12 Fri</div>
+            <div class="days">13 Sut</div>
+            <div class="days">14 Sun</div>
+            <div class="days">15 Mon</div>
+            <div class="days">16 Tue</div>
+            <div class="days">17 Wed</div>
+            <div class="days">18 Thu</div>
+            <div class="days">19 Fri</div>
+            <div class="days">20 Sut</div>
+            <div class="days">21 Sun</div>
+            <div class="days">22 Mon</div>
+            <div class="days">23 Tue</div>
+            <div class="days">24 Wed</div>
+            <div class="days">25 Thu</div>
+            <div class="days">26 Fri</div>
+            <div class="days">27 Sut</div>
+            <div class="days">28 Sun</div>
+            <div class="days">29 Mon</div>
+            <div class="days">30 Tue</div>
+            <div class="days">31 Wed</div>
         </div>
        </div>
 
@@ -77,32 +80,32 @@
             <div class="task_calendar">
                 <div class="task_item">
                     <div class="item_top">
-                        <div class="label">1</div>
-                        <div class="Name">Ux member payment 
+                        <div class="label"> <img src="img/check_white_24dp.svg" alt="done" class="done"></div>
+                        <div class="Name" id="name"> <b> Ux member payment </b> 
                             <div class="under_name">Google Product Design</div>
                         </div>
-                        <div class="time">12.00</div>
+                        <div class="time" id="time">12.00 am</div>
                     </div>
                     <div class="item_top item_gray">
-                        <div class="label">2</div>
-                        <div class="Name">Interview user Flow
+                        <div class="label"> <img src="img/check_white_24dp.svg" alt="done" class="done"></div>
+                        <div class="Name" id="name"> <b>Interview user Flow</b>
                             <div class="under_name">Facebook user</div>
                         </div>
-                        <div class="time">14.00</div>
+                        <div class="time" id="time">14.00 pm</div>
                     </div>
                     <div class="item_top">
-                        <div class="label">2</div>
-                        <div class="Name">Grows data analyst
+                        <div class="label"> <img src="img/watch_later_white_24dp.svg" alt="watch" class="watch"> </div>
+                        <div class="Name" id="name"> <b>Grows data analyst</b>
                             <div class="under_name">Google ux Team</div>
                         </div>
-                        <div class="time">16.00</div>
+                        <div class="time" id="time">16.00 pm</div>
                     </div>
                     <div class="item_top item_gray">
-                        <div class="label">2</div>
-                        <div class="Name">Cretae new features
+                        <div class="label label_empty"> </div>
+                        <div class="Name" id="name"> <b>Cretae new features</b>
                             <div class="under_name">Tesla serves</div>
                         </div>
-                        <div class="time">20.00</div>
+                        <div class="time" id="time">20.00 pm</div>
                     </div>
                 </div>
                 
@@ -113,6 +116,13 @@
 
 
         </div>
+    </section>
+    
+    <section class="bottom">
+        <div class="menu"><img src="img/home_black_24dp.svg" alt="home" class="img_menu"></div>
+        <div class="menu"><img src="img/date_range_black_24dp.svg" alt="Range" class="img_menu"></div>
+        <div class="menu"><img src="img/assignment_ind_black_24dp.svg" alt="Assignment" class="img_menu"></div>
+        <div class="menu"><img src="img/pie_chart_black_24dp.svg" alt="PieChart" class="img_menu"></div>
     </section>
 </body>
 </html>
