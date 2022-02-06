@@ -137,17 +137,23 @@ body
         height: 15px
         border-radius: 100%
         padding: 3px
-        display: block
         margin: 0 auto
-        &::after
-            content: "point"
-            width: 10px
-            height: 10px
-            background-color: black
+        display: grid
+        grid-template-columns: 1
+        justify-content: center
+        
+    .point
+        text-align: center
+    
     .done
         background-color: green
     .watch
         background-color: orange
+    .point
+        align-items: center
+
+   
+        
 .label_empty
     width: 10px
     height: 10px
@@ -182,6 +188,7 @@ body
     img
         width: 30px
         height: 30px
+        background-color: red
 
 
 
