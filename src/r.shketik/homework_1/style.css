@@ -1,0 +1,264 @@
+body{
+  background: rgb(94, 83, 196);
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+header{
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container_menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__burger{
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  margin: 6px 0;
+}
+
+.menu__rigt{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon__call{
+width: 50px;
+margin-right: 20px;
+
+}
+
+.icon__active{
+  position: relative;
+}
+.icon__active::before{
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: red;
+  border-radius: 50%;
+  top: 4px;
+  left: 35px;
+}
+.profile__photo{
+  width: 80px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+
+/*--------------calendar--------------------*/
+
+.calendar__top{
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  color: #fff;
+}
+
+.calendar_btn{
+  border: none;
+  width: 20px ;
+  height: 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+  background: rgb(136, 130, 196);
+  font-size: 13px;
+  color: #fff;
+}
+
+.calendar__bottom{
+margin: 10px 0;
+overflow: auto;
+display: flex;
+}
+
+.btn__number{
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  margin-right: 10px;
+  padding-left: 26px;
+  padding-right: 24px;
+  
+  background: rgb(118, 111, 190);
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn__number:hover{
+  background: rgb(250, 250, 250);
+  color: rgb(118, 111, 190); 
+}
+
+.days_number{
+  margin-bottom: 0px;
+  font-size: 25px;
+  
+  
+}
+
+.days_day{
+  margin-top: 16px;
+  font-size: 20px;
+}
+
+
+
+
+/*-----------------task----------------*/
+
+
+.task{
+  
+  padding-top: 20px ;
+  margin-top: 50px;
+
+border: none;
+  background: #fff;
+  border-radius: 40px 40px 0px 0px;
+
+}
+
+.task__header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+
+}
+
+.task__menu{
+  display: flex;
+}
+
+.dot{
+  
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: rgb(0, 0, 0);
+  margin: 6px 4px;
+}
+
+.content{
+ display: flex;
+ justify-content: space-between;
+ align-items: flex-start;
+
+ padding: 30px 0;
+
+  position: relative;
+
+
+}
+
+.content::before{
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 100%;
+  background-image: url("img/Ellipse.svg");
+  top: 60px;
+  left: 13px;
+  background-repeat: repeat-y;
+  background-size: 2px 11px;
+  
+  
+}
+.content:last-child::before{
+  display: none;
+}
+
+.content__icon{
+
+}
+
+
+
+.icon__check{
+  width: 30px;
+  border-radius: 100%;
+  background: rgb(2, 131, 12);
+}
+
+.icon__schedule{
+  width: 30px;
+  border-radius: 100%;
+  background: rgb(245, 132, 3);
+}
+
+.icon__circle{
+  border: 2px solid rgb(104, 104, 104);
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background: #fff;
+}
+
+.content__text{
+width: 222px;
+text-align: left;
+}
+
+.text__task{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 20px;
+
+}
+
+.text__inc{
+margin: 0;
+padding: 0;
+font-weight: bold;
+color: rgb(104, 104, 104);
+ 
+}
+
+.content__time{
+  font-weight: bold;
+  color: rgb(104, 104, 104);
+}
+
+
+/*-----------footer---------*/
+
+footer{
+  background: #fff;
+  
+}
+
+.container__footer{
+  display: flex;
+  justify-content: space-between;
+
+  padding: 25px 0;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-size: 50px; 
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  color: rgb(73, 73, 73);
+}
+.material-icons:hover{
+color: rgb(252, 173, 173);
+}
