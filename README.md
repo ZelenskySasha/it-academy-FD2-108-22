@@ -1,4 +1,3 @@
-# it-academy-166-21
 Repository for it-academy listeners
 
 
