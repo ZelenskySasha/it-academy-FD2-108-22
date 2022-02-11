@@ -1,0 +1,194 @@
+body
+    font-family: 'Roboto', sans-serif
+    font-weight: 600
+    height: 100vh
+
+    
+    
+.calendar
+    width: 97%
+    height: 750px
+    background: url(../img/vintage-wallpaper.png) 
+    display: block
+    margin: 0 auto
+    margin-top: 5px
+    border-radius: 10px
+    padding-top: 25px
+.calendar_top
+    padding-left: 25px
+    padding-right: 25px
+.head_menu
+    display: flex
+    justify-content: space-between
+.head_menu_solid
+    display: flex
+    flex-direction: column
+    padding-top: 20px
+.line
+    width: 20px
+    height: 1px
+    background-color: white 
+    margin-top: 5px
+.line_medium
+    width: 15px
+.head_menu_person
+    display: flex
+    justify-content: space-between
+.bell
+    padding-top: 20px
+    img
+        width: 30px
+        height: 30px
+        margin-right: 25px
+        transform: rotate(-35deg)
+.person
+    img
+        width: 70px
+        height: 70px
+        border-radius: 100%
+
+.month
+    color: white
+    font-size: 30px
+    font-weight: 700
+    margin-top: 20px
+    img
+        background-color: #000b3174
+        border-radius: 5px
+        vertical-align: center
+        margin-right: 6px
+        &:hover
+            background-color: #000b31
+            color: white
+
+.calendar_days
+    display: flex
+    justify-content: space-between
+    margin-top: 30px
+    overflow-x: auto
+    overflow-y: hidden
+    width: 100%
+
+.days
+    border: 2px solid #000b3174
+    padding: 10px 20px
+    min-width: 30px
+    min-height: 50px
+    margin: 5px
+    border-radius: 10px
+    background-color: #000b3174
+    text-align: center
+    color: white
+    font-weight: 800
+    font-size: 17px
+    line-height: 30px
+    &:hover
+        background-color: white
+        color: #000b31
+        box-shadow: 2px 2px 2px 2px black
+        border: 2px solid #000b3174
+
+
+.task
+    margin-top: 80px
+    
+    background-color: white
+    border-radius: 20px 
+    height: 425px
+
+.task_head
+    display: flex
+    justify-content: space-between
+    padding: 20px
+.task_menu
+    font-size: 20px
+    font-weight: 600
+.task_point
+    display: flex
+    justify-content: space-between
+    padding: 5px
+    
+.point
+    width: 4px
+    height: 4px
+    background-color: black
+    border: 100%
+    margin: 3px
+    
+
+.item_top
+    display: grid
+    grid-template-columns: repeat(6, minmax(40px, 1fr))
+    justify-content: space-between
+    padding: 15px 5px
+    background-color: white
+#time
+    grid-column-start: 6
+    grid-column-end: 7
+#name
+    grid-column-start: 2
+    grid-column-end: 6
+.item_gray
+    background-color: #000b3151
+
+.label
+    img
+        width: 15px
+        height: 15px
+        border-radius: 100%
+        padding: 3px
+        margin: 0 auto
+        display: grid
+        grid-template-columns: 1
+        justify-content: center
+        
+    .point
+        text-align: center
+    
+    .done
+        background-color: green
+    .watch
+        background-color: orange
+    .point
+        align-items: center
+
+   
+        
+.label_empty
+    width: 10px
+    height: 10px
+    border-radius: 100%
+    padding: 3px
+    border: 2px solid #000b3151
+    display: block
+    margin: 0 auto
+    &:hover
+        background-color: #000b3151
+
+       
+.time
+    font-size: 15px
+    font-weight: 300
+    text-align: right
+.Name
+    font-weight: 600
+    font-size: 20px
+.under_name
+    margin-top: 10px
+    font-size: 13px
+
+
+
+
+.bottom
+    display: flex
+    justify-content: space-between
+    padding: 25px 25px 30px 25px
+.menu
+    img
+        width: 30px
+        height: 30px
+        background-color: red
+
+
+

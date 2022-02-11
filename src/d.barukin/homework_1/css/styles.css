@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');
+body {
+    font-family: 'Azeret Mono', monospace;
+    margin: 0px;
+}
+.to-do {
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(195, 20, 50), rgb(36, 11, 54));
+}
+.material-icons-outlined {
+    font-family: 'Material icons'
+}
+.material-icons-outlined:focus {
+    color: black;
+    text-shadow: 0px 0px 10px white;
+}
+.header {
+    display: flex;
+    padding: 55px 30px 0px 30px;
+    justify-content: space-between;
+}
+.header div {
+    display: flex;
+}
+.header span {
+    font-size: 60px;
+    color: white;
+    margin-right: 10px;
+}
+.header img {
+    width: 60px;
+    border-radius: 50%;
+}
+.month-year {
+    display: flex;
+    align-items: center;
+}
+.month-year p {
+    display: inline;
+    font-size: 35px;
+    color: white;
+    padding: 0px 30px;
+    margin-top: 30px;
+}
+.month-year span {
+    font-size: 35px;
+    color: white;
+}
+.dates {
+    margin: 0px 35px;
+    display: flex;
+    height: 170px;
+    overflow-x: auto;
+}
+.dates div {
+    color: white;
+    padding: 30px 15px 0px;
+    text-align: center;
+    height: 125px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 35px;
+    border-radius: 10px;
+    margin-right: 25px;
+}
+.dates div:focus {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+.tasks {
+    border-radius: 20px;
+    margin: 20px auto 0px;
+    width: 85%;
+    height: 415px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+.tasks-header {
+    display: flex;
+    font-size: 40px;
+    justify-content: space-between;
+    padding: 20px 20px 0px;
+}
+.container {
+    display: block;
+    position: relative;
+    margin-left: 20px;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    user-select: none;
+} 
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.container input:checked ~ .checkmark {
+    background-color: rgb(195, 20, 50);
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+.container .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+.container input:checked ~ p {
+    text-decoration: line-through;
+}
+.time {
+    margin-left: 20px;
+}
+.footer {
+    padding: 15px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 40px;
+    color: white;
+}

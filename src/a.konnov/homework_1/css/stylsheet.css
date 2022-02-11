@@ -1,0 +1,147 @@
+body {
+    background-image: url(../img/backgraund.webp);
+    margin: 0px;
+}
+.header {
+    display: flex;
+    margin: 25px;
+}
+.user-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.menu-button {
+    width: 15%;
+    margin-right: 50%;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 38px;
+
+}
+.user-photo img {
+    width: 100%;
+}
+.bell {
+    width: 15%;
+    text-align: right;
+    position: relative;
+    top: 20px;
+    color: white;
+    font-size: 22px;
+}
+#month {
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    background: none;
+    color: white;
+    margin: 0 25px;
+}
+.dates_items {
+    margin: 25px;
+    overflow: scroll;
+}
+.dates_list {
+    display: flex;
+    justify-content: space-between;
+}
+.date {
+    background-color: #2b5e9a;
+    margin: 5px;
+    min-width: 22%;
+    text-align: center;
+    border-radius: 25px;
+}
+.date:hover {
+    background-color: white;
+    color: #2b5e9a;
+}
+.date:hover .date-num, .date:hover .week_day {
+    color: #2b5e9a;
+}
+.date-num {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+.week_day {
+    color: white;
+    font-size: 20px;
+}
+.to-do_list {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background-color: white;
+    min-height: 35vh;
+    padding: 0 25px;
+    margin-bottom: 295px;
+}
+.list_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list_head p {
+    font-size: 35px;
+    font-weight: bolder;
+    color: #4e4e4e;
+}
+.list_item {
+    display: flex;
+    justify-content: space-between;
+}
+.list_item label > input:checked ~ .checkbox_check::before {
+    content: 'check_circle';
+    color: green;
+}
+.list_item label > input:not(:checked) ~ .checkbox_check::before {
+    content: 'radio_button_unchecked';
+}
+.list_item label {
+    width:7%;
+}
+.task_name {
+    width: 60%;
+}
+.task_name p {
+    margin-top: 5px;
+}
+.task_time {
+    width: 18%;
+}
+.task_name h3 {
+    margin: 0px;
+}
+.footer {
+    background-color: #2b5e9a;
+    position: fixed;
+    bottom: 235px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer_item {
+    font-size: 32px;
+    color: aliceblue;
+}
+.footer :nth-child(2) {
+    color: #fa8f94;
+}
+.dashed-line {
+    position: relative;
+    border-left: dashed 1px black;
+    height: 70%;
+    width: 1px;
+    top: -8px;
+    left: 12px;
+}
+sup {
+    font-size: 30px;
+    color: red;
+    width: 5%;
+}
