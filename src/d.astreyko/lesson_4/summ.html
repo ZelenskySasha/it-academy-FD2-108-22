@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Напишите функцию sumInput(), которая:
+
+Просит пользователя ввести значения, используя prompt и сохраняет их в массив.
+Заканчивает запрашивать значения, когда пользователь введёт не числовое значение, пустую строку или нажмёт «Отмена».
+Подсчитывает и возвращает сумму элементов массива.
+P.S. Ноль 0 – считается числом, не останавливайте ввод значений при вводе «0».-->
+
+<script>
+
+  const arrayLength = parseInt(prompt('Введите количесво чисел'));
+
+  const array = [];
+
+  for (let i = 0; i < arrayLength; i++) {
+    const num = parseInt(prompt('Введите число'));
+    array.push(num);
+  }
+
+  let sum = 0;
+  for (let i = 0; i < arrayLength; i++) {
+    sum += array[i];
+  }
+
+  alert(array.join(' + ') + ' = ' + sum);
+
+</script>
+</body>
+</html>

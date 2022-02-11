@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .dialog-container {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        .dialog-background {
+            background-color: black;
+            opacity: 0.15;
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .dialog {
+            background: white;
+            border-radius: 4px;
+            width: 200px;
+            padding: 12px;
+            margin: 200px auto;
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="openDialog()">open</button>
+
+
+<script>
+  function openDialog() {
+    openConfirmDialog('МОй вопрос',
+      (answer) => {
+        console.log(answer);
+        alert('ПОслали бекенд');
+      }
+      , sendToBackend);
+  }
+
+  function sendToBackend() {
+    alert('ПОслали бекенд');
+  }
+
+  function onCancel() {
+    alert('ничего не делаем');
+  }
+
+  function openConfirmDialog(question, onCancel, onConfirm) {
+    const dialog = document.createElement('div');
+    dialog.innerHTML = '' +
+      '<div id="dialog"' +
+      '     class="dialog-container">' +
+      '    <div class="dialog-background"></div>' +
+      '    <div class="dialog">' +
+      `        <p id="dialogText">${question}</p>` +
+      '        <button>no</button>' +
+      '        <button>yes</button>' +
+      '    </div>' +
+      '</div>';
+    document.body.append(dialog);
+    const buttons = dialog.querySelectorAll('button');
+    buttons[0].addEventListener('click', () => {
+      dialog.remove();
+      onCancel('123');
+    });
+    buttons[1].addEventListener('click', () => {
+      dialog.remove();
+      onConfirm();
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,8 +1,8 @@
-
 function generateText() {
   console.log('generate');
   return 'random text';
 }
+
 function showMessage(...args) {
   console.log(arguments);
   console.log(args);
