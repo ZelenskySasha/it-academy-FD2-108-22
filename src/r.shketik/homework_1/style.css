@@ -1,0 +1,279 @@
+body {
+  background : rgb(94, 83, 196);
+  font-family: 'Open Sans', sans-serif;
+  padding    : 0;
+  margin     : 0;
+}
+
+.container {
+  width : 90%;
+  margin: 0 auto;
+}
+
+
+
+
+.header {
+  padding-top   : 20px;
+  padding-bottom: 6px;
+  position      : fixed;
+  margin        : 0;
+  top           : 0;
+  left          : 0;
+  right         : 0;
+  background    : rgb(83, 73, 167);
+}
+
+
+
+.header__inner {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+}
+
+.menu__burger {
+  width : 30px;
+  height: 40px;
+}
+
+.material-menu {
+  width : 100%;
+  height: 100%;
+  color: #fff;
+}
+
+
+.menu__right {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+}
+
+.notification__icon {
+  width       : 50px;
+  margin-right: 20px;
+}
+
+.notification__active {
+  position: relative;
+}
+
+.notification__active::before {
+  position        : absolute;
+  content         : "";
+  width           : 6px;
+  height          : 6px;
+  background-color: red;
+  border-radius   : 50%;
+  top             : 4px;
+  left            : 35px;
+}
+
+.profile__photo {
+  width        : 80px;
+  border-radius: 50%;
+  margin-right : 10px;
+}
+
+
+/*--------------calendar--------------------*/
+.calendar {
+  margin-top: 125px;
+}
+
+.calendar__top {
+  display       : flex;
+  align-items   : center;
+  padding-bottom: 15px;
+  color         : #fff;
+}
+
+.calendar__title {
+  color       : #fff;
+  font-size   : 25px;
+  margin-right: 15px;
+}
+
+
+
+.calendar_btn {
+  border       : none;
+  width        : 20px;
+  height       : 20px;
+  margin-left  : 20px;
+  border-radius: 5px;
+  background   : rgb(136, 130, 196);
+  font-size    : 13px;
+  color        : #fff;
+}
+
+.calendar__bottom {
+  margin  : 10px 0;
+  overflow: auto;
+  display : flex;
+}
+
+.btn__number {
+  border       : none;
+  border-radius: 10px;
+  width        : 100px;
+  margin-right : 10px;
+  padding-left : 26px;
+  padding-right: 24px;
+  background : rgb(118, 111, 190);
+  color      : #fff;
+  font-weight: bold;
+}
+
+.btn__number:hover {
+  background: rgb(250, 250, 250);
+  color     : rgb(118, 111, 190);
+}
+
+.days_number {
+  margin-bottom: 0px;
+  font-size    : 25px;
+}
+
+.days_day {
+  margin-top: 16px;
+  font-size : 20px;
+}
+
+/*-----------------task----------------*/
+
+.task {
+  padding-top  : 20px;
+  margin-top   : 50px;
+  margin-bottom: 73px;
+  border       : none;
+  background   : #fff;
+  border-radius: 40px 40px 0px 0px;
+}
+
+.task__header {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+  font-weight    : bold;
+}
+
+.task__menu {
+  display: flex;
+}
+
+.dot {
+  width           : 4px;
+  height          : 4px;
+  border-radius   : 100%;
+  background-color: rgb(0, 0, 0);
+  margin          : 6px 4px;
+}
+
+.content {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : flex-start;
+  padding: 30px 0;
+  position: relative;
+}
+
+.content::before {
+  position         : absolute;
+  content          : "";
+  width            : 8px;
+  height           : 100%;
+  background-image : url("img/Ellipse.svg");
+  top              : 60px;
+  left             : 13px;
+  background-repeat: repeat-y;
+  background-size  : 2px 11px;
+}
+
+.content:last-child::before {
+  display: none;
+}
+
+.icon__check {
+  width        : 30px;
+  border-radius: 100%;
+  background   : rgb(2, 131, 12);
+}
+
+.icon__schedule {
+  width        : 30px;
+  border-radius: 100%;
+  background   : rgb(245, 132, 3);
+}
+
+.icon__circle {
+  border       : 2px solid rgb(104, 104, 104);
+  width        : 25px;
+  height       : 25px;
+  border-radius: 100%;
+  background   : #fff;
+}
+
+.content__text {
+  width     : 222px;
+  text-align: left;
+}
+
+.text__task {
+  margin     : 0;
+  padding    : 0;
+  font-weight: bold;
+  font-size  : 20px;
+
+}
+
+.text__inc {
+  margin     : 0;
+  padding    : 0;
+  font-weight: bold;
+  color      : rgb(104, 104, 104);
+
+}
+
+.content__time {
+  font-weight: bold;
+  color      : rgb(104, 104, 104);
+}
+
+
+/*-----------footer---------*/
+
+.footer {
+  background: rgb(228, 228, 228);
+  position  : fixed;
+  bottom    : 0;
+  right     : 0;
+  left      : 0;
+
+}
+
+.footer__inner {
+  padding: 13px 0 9px;
+}
+
+.footer__nav {
+  display        : flex;
+  list-style-type: none;
+  justify-content: space-between;
+  padding        : 0;
+  margin         : 0;
+}
+
+.footer__nav-link>.material-icons {
+  font-family   : 'Material Icons';
+  font-size     : 50px;
+  display       : inline-block;
+  line-height   : 1;
+  text-transform: none;
+  color         : rgb(73, 73, 73);
+}
+
+.footer__nav-link>.material-icons:hover {
+  color: rgb(252, 173, 173);
+}
