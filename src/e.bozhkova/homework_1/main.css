@@ -1,0 +1,117 @@
+main{
+    color:  #ffffff;
+    flex: 1;
+}
+
+.calendar {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.calendar h2 { 
+    font-weight: 100;
+}
+
+.container {
+    white-space: nowrap;
+    overflow-x: auto;
+    margin: 5% 0 10% 0;
+}
+
+.item {
+    display: inline-block;
+    width: 10%;
+    height: 55px;
+    background-color: rgba(255, 255, 255, .2);
+    border-radius: 10%;
+    margin-right: 2%;
+    padding: 5%;
+    text-align: center;
+}
+
+.item span {
+    display: block;
+    padding-top: 30%;
+}
+
+.item.active {
+    background-color: white;
+    color: #000000;
+}
+
+.square {
+    margin-left: 2%;
+    background-color: rgba(255, 255, 255, .2);
+    width: auto;
+    height: auto;
+    border-radius: 25%;
+    font-size: 16px;
+}
+
+.list {
+    background-color: white;
+    color: black;
+    border-radius: 25px 25px 0 0;
+    height: 100%;
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    background-color: #F3F1FF;
+    border-radius: 25px 25px 0 0;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #F3F1FF;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+table td {
+  padding: 0 5%;
+  vertical-align: top;
+  text-align: left;
+  font-size: 15px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+}
+
+table {
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+.task {
+    display: block;
+
+}
+
+.button {
+    color: white;
+    border-radius: 50%;
+    font-size: 15px;
+    padding: 1%;
+    margin-right: 2%;
+}
+
+.button_done {
+    background-color: #00C32F;
+}
+
+.button_active {
+    background-color: #FFCE56;
+}
+
+.button_default {
+    border:  1px solid lightgray;
+    width: 15px;
+    height: 15px;
+}
