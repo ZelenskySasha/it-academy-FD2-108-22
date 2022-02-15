@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> </head>
+
+<body>
+    <script>
+        function ConvertToArray(str) {
+            var array = [];
+            word = "";
+            for (i = 0; i < str.length; i++) {
+                if ((str[i] == " ") || (i == str.length - 1)) {
+                    array.push(word);
+                    word = "";
+                }
+                word = word + str[i];
+            }
+            return array;
+        }
+        document.write(ConvertToArray("Robin Singh") + "</br>");
+        document.write(ConvertToArray("I love arrays they are my favorite") + "</br>");
+    </script>
+</body>

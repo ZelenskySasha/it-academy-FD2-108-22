@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <script>
+    function MinMax(str) {
+      str = " " + str;
+      min = parseInt(str);
+      max = min;
+      for (i = 0; i < str.length; i++) {
+        if (str[i - 1] == " ") {
+          if (min > parseInt(str.substr(i, str.length))) min = parseInt(str.substr(i, str.length));
+          if (max < parseInt(str.substr(i, str.length))) max = parseInt(str.substr(i, str.length));
+        }
+      }
+      document.write(min + ", " + max + "</br>");
+    }
+    MinMax("1 2 3 -2 44");
+    MinMax("-5 -4 -3 -2 -1");
+  </script>
+</body>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> </head>
+
+<body>
+    <script>
+        function accum(str) {
+            result = "";
+            for (i = 0; i < str.length; i++) {
+                if (i != 0) {
+                    result = result + "-";
+                }
+                result = result + str[i].toUpperCase();
+                for (n = 0; n < i; n++) {
+                    result = result + str[i].toLowerCase();
+                }
+            }
+            return result;
+        }
+        document.write(accum("abcd") + "</br>");
+        document.write(accum("RqaEzty") + "</br>");
+        document.write(accum("cwAt") + "</br>");
+    </script>
+</body>

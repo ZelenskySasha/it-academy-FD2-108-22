@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> </head>
+
+<body>
+    <script>
+        function ReverseArray(number) {
+            let array = [];
+            for (i = 1; i <= String(number).length; i++) {
+                array.push(String(number)[String(number).length - i]);
+            }
+            return array;
+        }
+        document.write(ReverseArray(348597) + "</br>");
+    </script>
+</body>

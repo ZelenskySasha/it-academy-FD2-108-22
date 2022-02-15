@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <script>
+    function IsItAnIsogram(str) {
+      result = true;
+      for (firstletter = 0; firstletter < str.length; firstletter++) {
+        for (i = firstletter; i < str.length; i++) {
+          if ((str[firstletter] == str[i + 1])) {
+            result = false;
+          }
+          if ((str[firstletter].toUpperCase() == str[i + 1]) || (str[firstletter].toLowerCase() == str[i + 1])) {
+            result = false;
+          }
+        }
+      }
+      return result;
+    }
+    document.write(IsItAnIsogram("Dermatoglyphics") + "</br>");
+    document.write(IsItAnIsogram("aba") + "</br>");
+    document.write(IsItAnIsogram("moOse") + "</br>");
+  </script>
+</body>

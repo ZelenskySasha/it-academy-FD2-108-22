@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> </head>
+
+<body>
+    <script>
+        function countBy(n,x) {
+            var array=[];
+            for(i=0;i<=x;i++){
+                
+                array[i]=n*i;
+            }
+      
+
+            return array.splice(1,x) ;
+        }
+        document.write(countBy(1,10) + "</br>");
+        document.write(countBy(2,5) + "</br>");
+
+    </script>
+</body>
