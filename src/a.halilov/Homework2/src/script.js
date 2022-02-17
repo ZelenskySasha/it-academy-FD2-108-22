@@ -132,7 +132,10 @@ function countBy(x, n){
     return result;
 }
 
-console.log(countBy(3, 10));
+console.log(countBy(1, 10));
+console.log(countBy(2, 5));
+
+
 
 
 
