@@ -135,6 +135,35 @@ function countBy(x, n){
 console.log(countBy(1, 10));
 console.log(countBy(2, 5));
 
+/* Задача 2  Convert a string to an array*/
+
+
+function convertToArray(str){
+    let array =  str.split(" ");
+    return array
+}
+console.log(convertToArray("I love arrays they are my favorite"));
+
+/* Задача 3 Count of positives / sum of negatives */
+
+function positivesSumAndNegativeSum(input){
+    let positive = 0;
+    let negative = 0;
+
+    if(input === null || input === undefined || input.length === 0){
+        return result;
+    }else{
+        input.forEach((num) => num > 0 ? positive++ : negative += num);
+    }
+
+    return [positive, negative];
+
+}   
+console.log(positivesSumAndNegativeSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
+
+
+
+
 
 
 
