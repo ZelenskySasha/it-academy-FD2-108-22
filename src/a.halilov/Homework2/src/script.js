@@ -20,7 +20,7 @@ function repeatStr(n, str){
 console.log(repeatStr(6, "I"));
 console.log(repeatStr(6, "Hello "));
 
-/* Второй вариант, не знаю, правильно или нет, но мне кажется так прикольно  */
+/* Второй вариант  */
 function repeatStrElse(n, str){
     console.log(str.repeat(n));
 }
@@ -146,7 +146,7 @@ console.log(convertToArray("I love arrays they are my favorite"));
 
 /* Задача 3 Count of positives / sum of negatives */
 
-function positivesSumAndNegativeSum(input){
+function positivesCountAndNegativeSum(input){
     let positive = 0;
     let negative = 0;
 
@@ -159,10 +159,36 @@ function positivesSumAndNegativeSum(input){
     return [positive, negative];
 
 }   
-console.log(positivesSumAndNegativeSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
+console.log(positivesCountAndNegativeSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
+
+/* Задача 4 Square(n) Sum */
 
 
+function sqaureSum(n){
+    let sum = 0;
+    for (let i = 0; i < n.length; i++){
+        sum += n[i] **2;
+    }
+    return sum;
 
+}
+
+console.log(sqaureSum([1,2,2]));
+
+
+/* Задача 5 Convert number to reversed array of digits */
+
+
+function reverseArray(number){
+    let array = [];
+    const str = number.toString();
+    let result = str.split("").reverse(" ").join(" ");
+    array.push(result);
+
+    return array;
+}
+
+console.log(reverseArray());
 
 
 
