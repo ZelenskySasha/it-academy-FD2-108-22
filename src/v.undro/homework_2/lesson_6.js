@@ -28,7 +28,7 @@ function combine() {
   let obj = {}
 
   for (let i = 0; i < arguments.length; i++) {
-        for (var key in arguments[i]) {
+        for (let key in arguments[i]) {
           obj[key] = obj[key] ? obj[key] + arguments[i][key]: arguments[i][key]
         }
   }
@@ -100,7 +100,7 @@ const averageAge = (arr) => {
   return age / arr.length;
 
 }
-console.log(averageAge(sortAgeMaxMin));
+// averageAge(sortAgeMaxMin);
 
 
 
