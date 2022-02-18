@@ -188,7 +188,7 @@ function reverseArray(number){
     return array;
 }
 
-console.log(reverseArray());
+console.log(reverseArray(123456));
 
 
 
