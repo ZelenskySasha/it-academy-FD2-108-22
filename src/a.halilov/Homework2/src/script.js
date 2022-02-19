@@ -245,3 +245,9 @@ function pyramid(n){
 console.log(pyramid(1));
 console.log(pyramid(2));
 console.log(pyramid(3));
+
+
+
+
+
+
