@@ -236,9 +236,12 @@ console.log(arrayPlusOne([4,1,1,9]));
 
 
 function pyramid(n){
-    let arr = [];
-
-    let pyramid = [1];
-    
-
+    const arr = [];
+    for(let i = 0; i<n; i++){
+        arr.push([...Array(i+1)].fill(1))
+    }
+    return arr;
 }
+console.log(pyramid(1));
+console.log(pyramid(2));
+console.log(pyramid(3));
