@@ -192,8 +192,53 @@ console.log(reverseArray(123456));
 
 
 
+/* Доп задачи */
+/* Задача 1 palindrom */
+
+
+function isPalindrom(str){
+    let newStr = str.toString().toLowerCase();
+    let array = newStr.split("");
+    let arraySort = array.slice().sort();
+    for (let i = 0; i<arraySort.length; i++){
+        if(arraySort[i+1] === arraySort[i]){
+            return true;
+        }
+    }
+    return false;
+}
+
+console.log(isPalindrom("Anna"));
+console.log(isPalindrom("walter"));
+console.log(isPalindrom(12321));
+console.log(isPalindrom(123456));
+
+
+/* Задача 2 +1 Array */
+function arrayPlusOne(arr){
+    let str = arr.join("");
+    let num = Number(str);
+
+    let sum = num + 1;
+    
+    let nil = sum.toString();
+    
+    return Array.from(nil);
+}
+
+console.log(arrayPlusOne([4,1,1,9]));
 
 
 
 
 
+/* Задача 3 pyramid */
+
+
+function pyramid(n){
+    let arr = [];
+
+    let pyramid = [1];
+    
+
+}
