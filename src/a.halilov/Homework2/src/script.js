@@ -466,5 +466,45 @@ console.log(olderAndYoungerUsersElse());
 на выходе должны вернуть двумерный массив размера n*n заполненный змейкой
  */
 
+/* 
+function makeSnake(n){
+
+    result = [];
+    if (n.length == 0){
+        return result;
+    }
+    
+    let max = n[0].length-1;
+    for(let i = 0; i< max; i++){
+        result.push(n[0][i]);
+    }
+    for (let i = max; i>=0; i--){
+        result.push(n[max][i]);
+    }
+    for(let i = max; i >=0; i--){
+        result.push(n[i][max]);
+    }
+
+    subN = [];
+    for(let i = 1; i<max; i++){
+        subN.push(n[i].splice(1, max-1));
+    }
+    result = result.concat(makeSnake(subN));
+}   
+console.log(makeSnake()); */
+
+/*   Не знаю как тут вообще быть */
 
 
+/* 
+var elements = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+var leftSide = elements.slice( 0, elements.length / 2 );
+var rightSide = elements.slice( elements.length / 2, elements.length ).reverse();
+var centered = [];
+while ( leftSide.length > 0 && rightSide.length > 0 ) {
+    centered.push( leftSide.pop() );
+    centered.push( rightSide.pop() );
+}
+elements = centered;
+console.log("elements " + elements);
+ */
