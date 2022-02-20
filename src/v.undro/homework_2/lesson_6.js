@@ -109,4 +109,49 @@ const averageAge = (arr) => {
 
   return Math.round(sum / arr.length);
 };
-averageAge(sortAgeMaxMin);
+// averageAge(sortAgeMaxMin);
+//
+function toCreateMatrix(n) {
+  let arr = [];
+  let matrix = [];
+  for (let i = 1; i <= n * n; i++) {
+    arr.push(i);
+  }
+  while (arr.length > 0) {
+    let matrixItem = arr.splice(0, n);
+    matrix.push(matrixItem);
+  }
+  return matrix;
+}
+
+let matrix = toCreateMatrix(5);
+console.log(matrix);
+/**
+ * идея решения взята из этого ролика https://www.youtube.com/watch?v=I58renaSzq4
+ * но сам разобрался)
+ */
+function snakeSort(n) {
+  let count = n.length;
+  let number = 1;
+  for (let i = 0; i < count / 2; i++) {
+    // i = 0, i = 1, i = 2
+    for (let j = i; j < count - i; j++) {
+      //прошлись по первой строке матрицы
+      matrix[i][j] = number++;
+    }
+    //прошлись по правому стодбцу
+    for (let k = i + 1; k < count - i; k++) {
+      matrix[k][count - 1 - i] = number++;
+    }
+    //прошлись по последней строке матрицы
+    for (let j = count - i - 2; j >= i; j--) {
+      matrix[count - 1 - i][j] = number++;
+    }
+    //прошлись по левому краю
+    for (let k = count - 2 - i; k > i; k--) {
+      matrix[k][i] = number++;
+    }
+  }
+  return n;
+}
+// console.log(snakeSort(matrix));
