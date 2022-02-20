@@ -8,7 +8,7 @@ function getMiddle(string) {
   }
     
 
-console.log(getMiddle("test")); // should return "es"
-console.log(getMiddle("testing")); // should return "t"
-console.log(getMiddle("middle")); // should return "dd"
-console.log(getMiddle("A")); // should return "A"
+console.log(getMiddle("test"));
+console.log(getMiddle("testing"));
+console.log(getMiddle("middle"));
+console.log(getMiddle("A"));
