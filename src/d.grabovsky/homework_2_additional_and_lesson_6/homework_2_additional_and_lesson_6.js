@@ -73,20 +73,7 @@ function pyramid(n) {
 // ======== 4. Flatten  =========
 
 let flatten = function (array) {
-  let result = [];
-
-  while (array.length === 1 &&  !Number.isInteger(array[0])) {
-    array = array[0];
-  }
-
-  if (array.length > 1) {
-    array.forEach(item => result = result.concat(item))
-  }
-  else {
-    result = result.concat(array);
-  }
-
-  return result;
+  return array.flat(Infinity);
 }
 
 
