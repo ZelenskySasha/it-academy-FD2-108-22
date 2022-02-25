@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="timerCounter">0</div>
+<button onclick="startTimer()">start</button>
+<button onclick="stopTimer()">stop</button>
+
+<script>
+  const timerElement = document.getElementById('timerCounter');
+  let counter = 0;
+  let intervalId;
+
+  function startTimer() {
+    intervalId = setInterval(() => {
+      counter++;
+      timerElement.textContent = counter;
+    }, 250);
+  }
+
+  function stopTimer() {
+        clearInterval(intervalId)
+  }
+
+</script>
+</body>
+</html>
