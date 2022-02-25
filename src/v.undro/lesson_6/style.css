@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+}
+.container {
+  max-width: 1240px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btns {
+  margin-top: 25px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.time {
+  font-size: 44px;
+}
+
+.hours {
+  color: red;
+}
+.minutes {
+  color: green;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  row-gap: 25px;
+}
