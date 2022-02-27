@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer type="text/javascript" src="class.js"></script>
+    <link rel="stylesheet" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="content-main">
+            <button class="btn" onclick="timer.addTime(1)">+1м</button>
+            <button class="btn" onclick="timer.addTime(5)">+5м</button>
+            <button class="btn" onclick="timer.addTime(10)">+10м</button>
+            <button class="btn" onclick="timer.addTime(15)">+15м</button>
+
+            <div class="timer-container">
+                <span class="timer" id="tm">01:00</span>
+            </div>
+
+            <div>
+                <button class="btn" onclick="timer.set(1)">1 минута</button>
+                <button class="btn" onclick="timer.set(2)">2 минуты</button>
+                <button class="btn" onclick="timer.set(5)">5 минут</button>
+                <button class="btn" onclick="timer.set(10)">10 минут</button>
+                <button class="btn" onclick="timer.set(15)">15 минут</button>
+            </div>
+            <div class="button-block">
+                <button class="button" id="start" onclick="timer.start()">
+                    <span class="material-icons-round">play_circle</span>
+                </button>
+                <button class="button" onclick="timer.stop()">
+                    <span class="material-icons-round">stop</span>
+                </button>
+                <button class="button" onclick="timer.reset()">
+                    <span class="material-icons-round">replay</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
