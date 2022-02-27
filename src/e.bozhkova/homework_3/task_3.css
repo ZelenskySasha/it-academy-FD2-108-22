@@ -1,0 +1,62 @@
+body {
+	font-family: 'Arimo', sans-serif;
+	background-color: #F2F2F2;
+}
+
+.timer {
+    text-align: center;
+    margin: 0 20%;
+    margin-top: 10%;
+}
+
+.time {
+	font-size: 20vh;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: white;
+}
+
+.button-group {
+	margin: 1.5%;
+}
+
+.button-time {
+	margin: 0.5%;
+	border-radius: 25px;
+	border: 1.5px solid #BFBFBF;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	background-color: #F2F2F2;
+}
+
+.button-time:hover {
+	opacity: 0.7;
+}
+
+.button-action {
+	margin: 0.5%;
+	padding: 0.75%;
+	border-radius: 10px;
+	color: white;
+	border: none;
+}
+
+.button-action:hover {
+	opacity: 0.7;
+}
+
+.button-action span {
+	font-size: 70px;
+}
+
+.button-action:nth-child(1) {
+	background-color: #00C796;
+}
+
+.button-action:nth-child(2) {
+	background-color: #FF6A6A;
+}
+
+.button-action:nth-child(3) {
+	background-color: #6371FF;
+}

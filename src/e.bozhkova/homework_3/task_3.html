@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Timer</title>
+	<script defer type="text/javascript" src="class.js"></script>
+	<link rel="stylesheet" type="text/css" href="task_3.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet">
+</head>
+<body class="timer">
+	<div class="button-group">
+		<button class="button-time" onclick="timer.addTime(1)">+1м</button>
+		<button class="button-time" onclick="timer.addTime(5)">+5м</button>
+		<button class="button-time" onclick="timer.addTime(10)">+10м</button>
+		<button class="button-time" onclick="timer.addTime(15)">+15м</button>
+	</div>
+	<div id='time' class="time"></div>
+	<div class="button-group">
+		<button class="button-time" onclick="timer.set(1)">1 минута</button>
+		<button class="button-time" onclick="timer.set(2)">2 минуты</button>
+		<button class="button-time" onclick="timer.set(5)">5 минут</button>
+		<button class="button-time" onclick="timer.set(10)">10 минут</button>
+		<button class="button-time" onclick="timer.set(15)">15 минут</button>
+	</div>
+	<div class="button-group">
+		<button id='startButton' onclick="timer.start()" class="button-action">
+			<span class="material-icons-round">play_arrow</span>
+		</button>
+		<button onclick="timer.stop()" class="button-action">
+			<span class="material-icons-round">stop</span>
+		</button>
+		<button onclick="timer.reset()" class="button-action">
+			<span class="material-icons-round">replay</span>
+		</button>
+	</div>
+</body>
+</html>
