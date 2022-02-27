@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./task1.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-buttons">
+            <button class="all-buttons add-one-minut" onclick="timer.addTime(1)">+1м</button>
+            <button class="all-buttons add-five-minut" onclick="timer.addTime(5)">+5м</button>
+            <button class="all-buttons add-ten-minut" onclick="timer.addTime(10)">+10м</button>
+            <button class="all-buttons add-fifteen-minut" onclick="timer.addTime(15)">+15м</button>
+        </div>
+        <div class="main">
+            <div class="clock">
+               <span id="timer" class="set-time"></div>
+        </div>
+        <div class="main-buttons">
+            <button class="all-buttons set-one-minut" onclick="timer.setTime(1)">1 минута</button>
+            <button class="all-buttons set-two-minut" onclick="timer.setTime(2)">2 минуты</button>
+            <button class="all-buttons set-five-minut" onclick="timer.setTime(5)">5 минут</button>
+            <button class="all-buttons set-ten-minut" onclick="timer.setTime(10)">10 минут</button>
+            <button class="all-buttons set-fifteen-minut" onclick="timer.setTime(15)">15 минут</button>
+        </div>
+        <div class="footer-buttons">
+            <button class="play button-footer-item" onclick="timer.startTime()"><span class="play-item"></span></button>
+            <button class="stop button-footer-item" onclick="timer.stopTime()"><span class="stop-item"></span></button>
+            <button class="reset button-footer-item" onclick="timer.resetTime()"></button>
+        </div>
+    </div>
+
+
+
+    <script src="./task1.js"></script>
+</body>
+
+</html>
