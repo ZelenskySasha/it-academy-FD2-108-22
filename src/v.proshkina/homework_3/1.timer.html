@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <link rel="stylesheet" href="./1.timer.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&family=Russo+One&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__for__addButtons">
+        <button onclick="timer.addTime(1)">+1м</button>
+        <button onclick="timer.addTime(5)">+5м</button>
+        <button onclick="timer.addTime(10)">+10м</button>
+        <button onclick="timer.addTime(15)">+15м</button>
+      </div>
+
+      <div id="timer" class="container__for_timer">00:00:00</div>
+
+      <div class="container__for__setButtons">
+        <button onclick="timer.setTime(1)">1 минута</button>
+        <button onclick="timer.setTime(2)">2 минуты</button>
+        <button onclick="timer.setTime(5)">5 минут</button>
+        <button onclick="timer.setTime(10)">10 минут</button>
+        <button onclick="timer.setTime(15)">15 минут</button>
+      </div>
+
+      <div class="container__for__threeButtons">
+        <button id="start" class="start" onclick="timer.startTime()">
+          <span class="material-icons-outlined"> play_arrow </span>
+        </button>
+        <button class="stop" onclick="timer.stopTime()">
+          <span class="material-icons-outlined"> stop </span>
+        </button>
+        <button class="reset" onclick="timer.resetTime()">
+          <span class="material-icons-outlined"> restart_alt </span>
+        </button>
+      </div>
+    </div>
+    <script src="./1.timer.js"></script>
+  </body>
+</html>

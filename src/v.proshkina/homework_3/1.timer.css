@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  min-width: 800px;
+}
+
+.material-icons-outlined {
+  font-family: "Material Icons";
+}
+
+.container {
+  min-width: 800px;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+div.container__for_timer {
+  min-width: 700px;
+  height: 50vh;
+  width: 60vw;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(to bottom, red, rgba(0, 0, 0, 0)) 1 100%;
+  font-family: "Monoton", cursive;
+  font-family: "Russo One", sans-serif;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.container__for__addButtons button,
+.container__for__setButtons button {
+  border-radius: 45px;
+  background-color: black;
+  color: white;
+  border: 2px solid blue;
+}
+
+.container__for__addButtons button {
+  width: 60px;
+}
+.container__for__setButtons button {
+  width: 100px;
+}
+
+button {
+  text-align: center;
+  line-height: 36px;
+}
+
+.container__for__threeButtons button {
+  text-align: center;
+  background-color: black;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-size: 70px;
+  line-height: 92px;
+  margin: 10px;
+}
+.start {
+  border: 2px solid green;
+}
+.stop {
+  border: 2px solid red;
+}
+.reset {
+  border: 2px solid rgb(87, 180, 218);
+}
+
+.start:disabled {
+  color: darkgrey;
+  border: darkgrey solid 2px;
+}
+.container__for__addButtons button:active,
+.container__for__setButtons button:active {
+  border: yellow 2px solid;
+}
