@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="timer.css" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons"/>
+</head>
+<body>
+    <div class="timer_container">
+        <div class="add_time">
+            <button id="add_1min" class="btn-add-time">+1m</button>
+            <button id="add_5min" class="btn-add-time">+5m</button>
+            <button id="add_10min" class="btn-add-time">+10m</button>
+            <button id="add_15min" class="btn-add-time">+15m</button>
+        </div>
+        <div class="time">
+            <span class="time_hours">00</span>&colon;
+            <span class="time_minutes">00</span>&colon;
+            <span class="time_seconds">00</span>&period;
+            <span class="time_milliseconds">00</span>
+        </div>
+        <div class="set_time">
+            <button id="set_1min" class="btn-set-time" >1 минута</button>
+            <button id="set_2min" class="btn-set-time">2 минуты</button>
+            <button id="set_5min" class="btn-set-time">5 минут</button>
+            <button id="set_10min" class="btn-set-time">10 минут</button>
+            <button id="set_15min" class="btn-set-time">15 минут</button>
+        </div>
+        <div class="control_panel">
+            <button id="start_timer" class="start" disabled><span class="material-icons"> play_arrow </span></button>
+            <button id="stop_timer" class="stop"><span class="material-icons"> stop </span></button>
+            <button id="reset_timer" class="reset"><span class="material-icons"> refresh </span></button>
+        </div>
+    </div>
+    <script src="timer.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.timer_container{
+    height: 60vh;
+    width: 80%;
+    margin: 30px 70px;
+    background-color:#e0dddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.add_time, .set_time {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 25px;
+}
+.btn-add-time, .btn-set-time{
+    border: 1px solid gray;
+    border-radius: 30px;
+    background-color: transparent;
+    font-size: 15px;
+    padding: 10px;
+    transition: all 150ms ease-in-out;
+    cursor: pointer;
+}
+.btn-add-time:hover, .btn-set-time:hover {
+    box-shadow: 0 0 10px 0 white inset, 0 0 10px 4px white;
+    transform: scale(1.1);
+}
+.time {
+    width: 95%;
+    height: 35%;
+    background-color: #fefefe;
+    font-size: 103px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.control_panel {
+    display: flex;
+    flex-direction: row;
+    column-gap: 18px;
+    margin-top: -14px;
+}
+.start, .stop, .reset {
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    padding: 5px;
+    transition: all 150ms ease-in-out;
+    cursor: pointer;
+    
+}
+
+.start:hover {
+    box-shadow: 0 0 10px 0 #a8fa69 inset, 0 0 10px 4px #a8fa69;
+}
+.stop:hover {
+    box-shadow: 0 0 10px 0 #fa7e6e inset, 0 0 10px 4px #fa7e6e;
+}
+.reset:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+
+
+.material-icons {
+    color: #fefefe;
+    font-size: 50px!important;
+}
+.start {
+    background-color:yellowgreen;
+}
+.stop {
+    background-color: indianred;
+}
+.reset {
+    background-color: royalblue;
+}
