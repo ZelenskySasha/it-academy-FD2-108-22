@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="font/Roboto-Black.ttf">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Timer</title>
+</head>
+<body>
+
+    <div class="container">
+        
+     
+        
+        <div class="time">
+            <button class="time_button" id="time_button">+1м</button>
+            <button class="time_button" id="time_button">+5м</button>
+            <button class="time_button" id="time_button">+10м</button>
+            <button class="time_button" id="time_button">+15м</button>
+        </div>
+        <div class="timer" id="time">
+            <div class="hour" id="hour">00 :</div>
+            <div class="min" id="min">00 :</div>
+            <div class="sec" id="sec">00 .</div>
+            <div class="msec" id="msec">00</div>
+        </div>
+
+        <div class="timeplus">
+            <button class="timeplus_min" id="timeplus_min" >1 минута</button>
+            <button class="timeplus_min" id="timeplus_min">2 минуты </button>
+            <button class="timeplus_min" id="timeplus_min">5 минут </button>
+            <button class="timeplus_min" id="timeplus_min">10 минут </button>
+            <button class="timeplus_min" id="timeplus_min">15 минут </button>
+        </div>
+
+
+        <div class="function">
+            <button class="start function_timer" id="start" onclick="timer.start()">
+                <i class="fa fa-play  icon" aria-hidden="true"></i>
+            </button>
+            <button class="stop function_timer" id="stop">
+                <i class="fa fa-stop icon" aria-hidden="true"></i>
+            </button>
+            <button class="res function_timer" id="res">
+                <i class="fa fa-reply icon" aria-hidden="true"></i>
+            </button>
+        </div>
+
+    </div>
+
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
