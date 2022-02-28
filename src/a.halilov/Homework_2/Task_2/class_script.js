@@ -19,7 +19,7 @@ class Student{
 
 
 
-let allStudents = [
+const allStudents = [
     new Student("Иванов", "Иван", "Иванович", 323, [1,7,10,3,9, 10]),
     new Student("Петров", "Влаеря", "Алексеевич", 32, [1,7,4,8,2, 1, 0]),
     new Student("Вас", "ИС", "Дас", 33, [1,1,10,8,2]),
