@@ -20,9 +20,8 @@
     const li = document.createElement('li');
     list.append(li);
     const timer = new Timer(time, li);
-    timer.start()
+    timer.start();
   }
-
 
   class Timer {
     intervalId;
@@ -37,13 +36,37 @@
       this.render();
     }
 
+    stop() {
+      clearInterval(this.intervalId);
+    }
+
     tick() {
       this.count--;
       this.render();
+      if (this.count === 0) {
+        this.stop();
+        this.destroy();
+      }
     }
 
     render() {
+      this.addColor();
       this.element.textContent = `timer ${this.count}`;
+    }
+
+    addColor() {
+      if (this.count < 10) {
+        this.element.style.background = 'yellow';
+      }
+      if (this.count === 0) {
+        this.element.style.background = 'red';
+      }
+    }
+
+    destroy() {
+      setTimeout(() => {
+        this.element.remove();
+      }, 3000);
     }
   }
 </script>
