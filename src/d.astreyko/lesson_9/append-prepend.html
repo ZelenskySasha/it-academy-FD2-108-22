@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="append()">append</button>
+<button onclick="prepend()">prepend</button>
+<button onclick="before()">before</button>
+<button onclick="after()">after</button>
+
+<ol>
+    <li id="initialLi">initial li</li>
+</ol>
+</body>
+<script>
+    const list = document.querySelector('ol');
+
+    function append() {
+      const li = document.createElement('li');
+      li.textContent = 'added to end'
+      list.append(li);
+    }
+
+    function prepend() {
+      const li = document.createElement('li');
+      li.textContent = 'added to start'
+      list.prepend(li);
+    }
+
+    function before() {
+      const li = document.createElement('li');
+      li.textContent = 'added before initial'
+      const initialLi = list.querySelector('#initialLi')
+      initialLi.before(li);
+    }
+
+    function after() {
+      const li = document.createElement('li');
+      li.textContent = 'added after initial'
+      const initialLi = list.querySelector('#initialLi')
+      initialLi.after(li);
+    }
+</script>
+</html>

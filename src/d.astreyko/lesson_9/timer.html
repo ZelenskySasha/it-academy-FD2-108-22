@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="addTimer(15)">15</button>
+<button>30</button>
+<button>45</button>
+
+<ol id="list"></ol>
+</body>
+
+<script>
+
+  const list = document.getElementById('list');
+
+  function addTimer(time) {
+    const li = document.createElement('li');
+    list.append(li);
+    const timer = new Timer(time, li);
+    timer.start();
+  }
+
+  class Timer {
+    intervalId;
+
+    constructor(initialCount, element) {
+      this.count = initialCount;
+      this.element = element;
+    }
+
+    start() {
+      this.intervalId = setInterval(() => this.tick(), 500);
+      this.render();
+    }
+
+    stop() {
+      clearInterval(this.intervalId);
+    }
+
+    tick() {
+      this.count--;
+      this.render();
+      if (this.count === 0) {
+        this.stop();
+        this.destroy();
+      }
+    }
+
+    render() {
+      this.addColor();
+      this.element.textContent = `timer ${this.count}`;
+    }
+
+    addColor() {
+      if (this.count < 10) {
+        this.element.style.background = 'yellow';
+      }
+      if (this.count === 0) {
+        this.element.style.background = 'red';
+      }
+    }
+
+    destroy() {
+      setTimeout(() => {
+        this.element.remove();
+      }, 3000);
+    }
+  }
+</script>
+</html>
