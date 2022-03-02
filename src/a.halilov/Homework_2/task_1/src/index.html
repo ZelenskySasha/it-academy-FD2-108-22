@@ -22,29 +22,30 @@
             <button class="time_button" id="time_button">+15м</button>
         </div>
         <div class="timer" id="time">
-            <div class="hour" id="hour">00 :</div>
-            <div class="min" id="min">05 :</div>
-            <div class="sec" id="sec">00 .</div>
-            <div class="msec" id="msec">00</div>
+            00:00:00
         </div>
 
         <div class="timeplus">
-            <button class="timeplus_min" id="timeplus_min" >1 минута</button>
-            <button class="timeplus_min" id="timeplus_min">2 минуты </button>
-            <button class="timeplus_min" id="timeplus_min">5 минут </button>
-            <button class="timeplus_min" id="timeplus_min">10 минут </button>
-            <button class="timeplus_min" id="timeplus_min">15 минут </button>
+            <button class="timeplus_min" id="timeplus_min" onclick="timer.setTime(1)" >1 минута</button>
+
+            <button class="timeplus_min" id="timeplus_min" onclick="timer.setTime(2)">2 минуты </button>
+
+            <button class="timeplus_min" id="timeplus_min" onclick="timer.setTime(5)">5 минут </button>
+
+            <button class="timeplus_min" id="timeplus_min" onclick="timer.setTime(10)">10 минут </button>
+
+            <button class="timeplus_min" id="timeplus_min" onclick="timer.setTime(15)">15 минут </button>
         </div>
 
 
         <div class="function">
-            <button class="start function_timer" id="start" onclick="timer.start()">
+            <button class="start function_timer" id="start" onclick="timer.startTime()">
                 <i class="fa fa-play  icon" aria-hidden="true"></i>
             </button>
-            <button class="stop function_timer" id="stop">
+            <button class="stop function_timer" id="stop" onclick="timer.stopTime()">
                 <i class="fa fa-stop icon" aria-hidden="true"></i>
             </button>
-            <button class="res function_timer" id="res">
+            <button class="res function_timer" id="res" onclick="timer.resetTime()">
                 <i class="fa fa-reply icon" aria-hidden="true"></i>
             </button>
         </div>
@@ -53,7 +54,11 @@
 
 
 
-    <script src="js/timer.js"></script>
+    <script src="js/timer.js">
+    
+        
+    </script>
+
 
 </body>
 </html>
