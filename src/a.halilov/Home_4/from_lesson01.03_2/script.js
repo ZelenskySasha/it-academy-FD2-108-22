@@ -15,6 +15,10 @@ function before(){
     list.prepend(li);
 } */
 
+
+
+
+
 const list = document.getElementById('list');
 
 function addTimer(time) {
@@ -46,7 +50,6 @@ class Timer {
     this.render();
     if (this.count === 0) {
       this.stop();
-      
       this.destroy();
     }
   }
@@ -54,22 +57,31 @@ class Timer {
   render() {
     this.addColor();
     this.element.textContent = `timer ${this.count}`;
+    this.afterTime();
   }
 
   addColor() {
     if (this.count < 10) {
       this.element.style.background = 'yellow';
     }
-    if (this.count === 0) {
+    if (this.count < 4) {
       this.element.style.background = 'red';
     }
   }
+  afterTime(){
+    if (this.count  < 4) {
+      this.element.textContent = `this timer delete after  ${this.count} `;
+    }
+    
+    
+  }
+
 
   destroy() {
       
     setTimeout(() => {
       this.element.remove();
-    }, 8000);
+    }, 500);
     
   }
 }

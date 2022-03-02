@@ -5,7 +5,6 @@ function generateTable(n){
     
     for(let i = 0; i<n; i++){
         let tr = document.createElement("tr");
-        
         for(let j = 0; j<n; j++){
             let td = document.createElement("td");
             tr.append(td);
@@ -13,12 +12,16 @@ function generateTable(n){
             let num2 = j + 1;
             td.textContent = num1 + " " + num2;
             
+            if(num1/num2 === 1){
+                td.style.backgroundColor = "red";
+                td.classList.add("red");
+
+            }
         }
         table.append(tr);
-        
     }
     return table;
 
 }
-document.body.append(generateTable(5));
+document.body.append(generateTable(7));
 
