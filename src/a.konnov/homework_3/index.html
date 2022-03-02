@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/stylesheet.css" rel="stylesheet" type="text/css">
+    
+    <title>Homework-3</title>
+</head>
+<body>
+    <div class="block">
+        <div class="conteiner head">
+            <button disabled class="plus_time" onclick="timer.set(1)">+ 1 м</button>
+            <button disabled class="plus_time" onclick="timer.set(5)">+ 5 м</button>
+            <button disabled class="plus_time" onclick="timer.set(10)">+ 10 м</button>
+            <button disabled class="plus_time" onclick="timer.set(15)">+ 15 м</button>
+        </div>
+
+        <div class="timer-display">
+            <div id="timeElement" class="timeElement">00:00:00</div>
+        </div>
+
+        <div class="conteiner bottom">
+            <button class="add_time" onclick="timer.addTime(1)">1 минута</button>
+            <button class="add_time" onclick="timer.addTime(2)">2 минуты</button>
+            <button class="add_time" onclick="timer.addTime(5)">5 минут</button>
+            <button class="add_time" onclick="timer.addTime(10)">10 минут</button>
+            <button class="add_time" onclick="timer.addTime(15)">15 минут</button>
+        </div>
+
+        <div class="conteiner master_buttons">
+            <button id="start" onclick="timer.start()"><img src="./img/play.svg" alt=""></button>
+            <button id="stop" onclick="timer.stop()"><img src="./img/stop.svg" alt=""></button>
+            <button id="rest" onclick="timer.reset()"><img src="./img/rest.svg" alt=""></button>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+.block {
+    background-color: #f2f2f2;
+    max-width: 600px;
+    margin: auto;
+}
+.master_buttons img {
+    width: 70%;
+}
+.timer-display {
+    background-color: #ffffff;
+    margin: 0 15%;
+}
+.conteiner {
+    display: flex;
+    justify-content: center;
+}
+#start {
+    background-color: #24bc9d;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+#stop {
+    background-color: #e97d75;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+#rest {
+    background-color: #369ad8;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+.plus_time, .add_time {
+    min-width: 80px;
+    min-height: 50px;
+    border: solid black 1px;
+    margin: 10px;
+    border-radius: 45%;
+    font-weight: bold;
+}
+.timer-display {
+    display: flex;
+    justify-content: center;
+    font-size: 78px;
+    font-weight: bolder;
+}
