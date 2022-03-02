@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Timer</title>
+</head>
+<body>
+    <div class="block">
+        <div class="container head">
+            <button disabled class="plus_time" onclick="timer.set(1)">+ 1 min</button>
+            <button disabled class="plus_time" onclick="timer.set(5)">+ 5 min</button>
+            <button disabled class="plus_time" onclick="timer.set(10)">+ 10 min</button>
+            <button disabled class="plus_time" onclick="timer.set(15)">+ 15 min</button>
+        </div>
+
+        <div class="timer-display">
+            <div id="timeElement" class="timeElement">00:00:00</div>
+        </div>
+
+        <div class="container bottom">
+            <button class="add_time" onclick="timer.addTime(1)">1 min</button>
+            <button class="add_time" onclick="timer.addTime(2)">2 min</button>
+            <button class="add_time" onclick="timer.addTime(5)">5 min</button>
+            <button class="add_time" onclick="timer.addTime(10)">10 min</button>
+            <button class="add_time" onclick="timer.addTime(15)">15 min</button>
+        </div>
+
+        <div class="container master_buttons">
+            <button id="start" onclick="timer.start()"><span class="material-icons-round">play_arrow</span></button>
+            <button id="stop" onclick="timer.stop()"><span class="material-icons-round">stop</span></button>
+            <button id="reset" onclick="timer.reset()"><span class="material-icons-round">replay</span></button>
+        </div>
+    </div>
+<script src="./timer.js"></script>
+</body>
+</html>
