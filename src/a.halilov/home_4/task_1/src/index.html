@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="generate">
+        <div class="title">
+            Создайте генерацию фигур
+        </div>
+        <div class="grid">
+            <div class="grid_elem">top</div>
+            <div class="grid_elem"> <input type="number" class="input"  value="20">   </div>
+            <div class="grid_elem">px</div>
+            <div class="grid_elem">left</div>
+            <div class="grid_elem"> <input type="number" class="input" value="20">  </div>
+            <div class="grid_elem">px</div>
+        </div>
+        <div class="button_group">
+            <button class="button"  onclick="generate.circle()"> круг </button>
+            <button class="button"  onclick="generate.quadrate()">квадрат</button>
+            <button class="button"  onclick="generate.triangle()">треугольник</button>
+        </div>
+        <select name="color" class="color">
+            <optgroup label="Сolor">
+                <option value="1" style="background-color: blue;">Синий</option>
+                <option value="2" style="background-color: rgb(168, 168, 228)"> Фиолетовый </option>
+                <option value="3" style="background-color: rgb(255, 0, 0); color: white;">Красный</option>
+                <option value="4" style="background-color: rgb(0, 0, 0); color: white;">Черный</option>
+                <option value="5" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">Белый</option>
+                <option value="6" style="background-color: rgb(140, 93, 171); color: white;">Какой то еще</option>
+                
+            </optgroup>
+        </select>
+    </div>
+
+    <div class="container">
+        <div class="tri" id="triangle"></div>
+        <div class="q" id="circle"></div>
+    </div>
+
+
+    <script src="js/script.js"> </script>
+</body>
+</html>
