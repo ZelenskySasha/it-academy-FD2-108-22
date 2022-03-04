@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Timer</title>
+</head>
+<body>
+
+  
+    <div class="btn__header">
+      <button class="btn__plus" onclick="timer.btnPlusMinutes(1)">+1м</button>
+      <button class="btn__plus" onclick="timer.btnPlusMinutes(5)">+5м</button>
+      <button class="btn__plus" onclick="timer.btnPlusMinutes(10)">+10м</button>
+      <button class="btn__plus" onclick="timer.btnPlusMinutes(15)">+15м</button>
+    </div>
+    
+      <div class="timer" >
+        <span id="timer-hours">00</span> :
+        <span id="timer-minutes">00</span> :
+        <span id="timer-seconds">00</span> . 
+        <span id="timer-millisecond">00</span>
+      </div>
+    <div class="btn__footer">
+      <button class="btn__min" onclick="timer.btnInstallMinutes(1)">1 минута</button>
+      <button class="btn__min" onclick="timer.btnInstallMinutes(2)">2 минуты</button>
+      <button class="btn__min" onclick="timer.btnInstallMinutes(5)">5 минут</button>
+      <button class="btn__min" onclick="timer.btnInstallMinutes(10)">10 минут</button>
+      <button class="btn__min" onclick="timer.btnInstallMinutes(15)">15 минут</button>
+    </div>
+
+    <div class="control">
+      <button class="timer__play" id="play" onclick="timer.playTimer()">
+        <span class="material-icons">
+        play_arrow
+        </span>
+      </button>
+      
+      <button class="timer__stop" onclick="timer.stopTimer()" >
+        <span class="material-icons">
+        stop
+        </span>
+      </button>
+
+      <button class="timer__replay" onclick="timer.replayTimer()">
+        <span class="material-icons">
+          replay   
+        </span>
+      </button>
+    </div>
+    
+ 
+  <script src="timer.js"></script>
+</body>
+</html>
