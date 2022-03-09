@@ -1,5 +1,7 @@
-function repeatStr(n, str) {
-    result = "";
+function repeatStr(number, sting) {
+    n = number;
+    str = sting;
+    let result = "";
     for (i = 0; i < n; i++) {
         result = result + str;
     }

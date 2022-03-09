@@ -1,7 +1,8 @@
 function ReverseArray(number) {
+    let str = String(number);
     let array = [];
-    for (i = 1; i <= String(number).length; i++) {
-        array.push(String(number)[String(number).length - i]);
+    for (i = 1; i <= str.length; i++) {
+        array.push(str[str.length - i]);
     }
     return array;
 }
