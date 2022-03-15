@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <div class="wrapper">
+
+        <div class="toppart">
+            <button class="buttons" onclick="doTimer(1,'addtime')">+1м</button>
+            <button class="buttons" onclick="doTimer(5,'addtime')">+5м</button>
+            <button class="buttons" onclick="doTimer(10,'addtime')">+10м</button>
+            <button class="buttons" onclick="doTimer(15,'addtime')">+15м</button>
+        </div>
+        <div class="middlepart">
+            <div id="timerCounter">00:00:00.00</div>
+
+        </div>
+        <div class="bottompart">
+            <div>
+                <button class="buttons" onclick="doTimer(1,'settime')">1 минута</button>
+                <button class="buttons" onclick="doTimer(2,'settime')">2 минуты</button>
+                <button class="buttons" onclick="doTimer(5,'settime')">5 минут</button>
+                <button class="buttons" onclick="doTimer(10,'settime')">10 минут</button>
+                <button class="buttons" onclick="doTimer(15,'settime')">15 минут</button>
+            </div>
+            <div class="partforbigbuttons">
+                <button class="bigbuttons" style="background-color: rgb(25, 194, 25);" onclick="doTimer(0,'start')"><span class="material-icons">
+                    play_arrow
+                    </span></button>
+                <button class="bigbuttons" style="background-color: rgb(241, 105, 64);" onclick="doTimer(0, 'stop')"><span class="material-icons">
+                    stop
+                    </span></button>
+                <button class="bigbuttons" style="background-color: rgb(53, 63, 207);" onclick="doTimer(0, 'reset')"><span class="material-icons">
+                    replay
+                    </span></button>
+                <div>
+
+                </div>
+
+            </div>
+        </div>
+</body>
+
+</html>
