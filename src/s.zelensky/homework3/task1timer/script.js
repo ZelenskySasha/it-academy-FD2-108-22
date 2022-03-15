@@ -49,6 +49,7 @@ class Timer {
         this.time = 0;
         this.render();
     }
+
     set(time) {
         this.time = time * 60 * 100;
         this.render();
@@ -59,3 +60,4 @@ class Timer {
     }
 }
 const timer = new Timer();
+timer.time = 40
