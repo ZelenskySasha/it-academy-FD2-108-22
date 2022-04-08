@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    <style>
+        #open {
+            width: 200px;
+            height: 100px;
+            font-size: 60px;
+            position: relative;
+            left: 40%;
+            top: 300px;
+        }
+        
+        #open:hover {
+            width: 300px;
+            height: 200px;
+            color: "red";
+        }
+        
+        .batton {
+            width: 100px;
+            height: 50px;
+            font-size: 30px;
+            position: relative;
+            top: 200px;
+            margin-right: 50px;
+            margin-left: 50px;
+        }
+        
+        .batton:hover {
+            opacity: 1;
+            background: #1ec7e6;
+            width: 100px;
+            height: 60px;
+            font-size: 35px;
+        }
+        
+        .divka {
+            width: 400px;
+            height: 300px;
+            position: absolute;
+            left: 35%;
+            top: 200px;
+            background-color: rgb(153, 153, 153);
+            border: 2px solid;
+        }
+    </style>
+    <script>
+        function showDialog(text, ) {
+            let buttonFirst = document.createElement('button');
+            let buttonSecond = document.createElement('button');
+            let div = document.createElement('div');
+            buttonSecond.classList = "batton";
+            buttonFirst.classList = "batton";
+            div.setAttribute("id", "divka");
+            div.classList = "divka";
+            document.body.append(div);
+            buttonFirst.innerHTML = "да";
+            buttonSecond.innerHTML = "нет";
+            div.append(buttonFirst);
+            div.append(buttonSecond);
+            //---//
+            const promise1 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('some text');
+                }, 300);
+            });
+            promise1.then((value) => {
+                console.log(value);
+
+            });
+            //---//
+            buttonFirst.addEventListener("click", op);
+            buttonSecond.addEventListener("click", cl);
+
+            function op() {
+                document.getElementById('divka').remove();
+            }
+
+            function cl() {
+                alert("close");
+                document.getElementById('divka').remove();
+            }
+
+
+
+
+        }
+
+        function show(text) {
+
+
+
+
+
+
+
+
+            if (text == "yes") {
+                showDialog(text);
+            } else {
+                showDialog("no");
+            }
+        }
+    </script>
+    <button id="open" onclick="show('yes');">Open</button>
+</body>
+
+</html>

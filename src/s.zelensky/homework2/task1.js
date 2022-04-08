@@ -1,9 +1,27 @@
-function textInversion(str) {
-    let result = "";
-    for (i = 1; i <= str.length; i++) {
-        result = result + str[str.length - i];
+let date = new Date(2012, 0, 3);
+console.log(dayName(date));
+
+function dayName(date) {
+    let n = date.getDay();
+    if (n == 0) {
+        return "вс";
     }
-    return result;
+    if (n == 1) {
+        return "пн";
+    }
+    if (n == 2) {
+        return "вт";
+    }
+    if (n == 3) {
+        return "ср";
+    }
+    if (n == 4) {
+        return "чт";
+    }
+    if (n == 5) {
+        return "пт";
+    }
+    if (n == 6) {
+        return "сб";
+    }
 }
-console.log(textInversion("world"));
-console.log(textInversion("word"));

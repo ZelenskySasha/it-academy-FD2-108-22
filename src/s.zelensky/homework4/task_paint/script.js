@@ -47,18 +47,18 @@ class Shape {
         if (shapesname == "rectangle") {
             amountofrectangle++;
             text.style.marginLeft = -amountofrectangle.toString().length * 7 + "px";
-            text.innerHTML = amountofrectangle;
+            //text.innerHTML = amountofrectangle;
         }
         if (shapesname == "triangle") {
             amountoftriangle++;
             text.style.marginLeft = -amountoftriangle.toString().length * 7 + "px";
-            text.innerHTML = amountoftriangle;
+            //text.innerHTML = amountoftriangle;
 
         }
         if (shapesname == "circle") {
             amountofcircle++;
             text.style.marginLeft = -amountofcircle.toString().length * 7 + "px";
-            text.innerHTML = amountofcircle;
+            //text.innerHTML = amountofcircle;
         }
 
 

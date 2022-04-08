@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+</head>
+<style>
+    #main {
+        background-color: bisque;
+        height: 300px;
+        width: 950px;
+        margin: 200px;
+    }
+    
+    .blocks {
+        position: relative;
+        height: 200px;
+        width: 100px;
+        background-color: rgb(156, 148, 148);
+        float: left;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+</style>
+
+<body>
+    <div id="main">
+
+    </div>
+    <script>
+        let i = 0;
+        for (let i = 0; i < 7; i++) {
+            start();
+        }
+
+
+        getForecast();
+
+        function start() {
+            i++
+            let block = document.createElement('div');
+            block.setAttribute('ip', i);
+            block.classList = 'blocks';
+            block.textContent = i;
+
+            let main = document.getElementById('main');
+            main.append(block);
+
+        }
+
+        function getForecast() {
+            let div = document.getElementById('main');
+            fetch("https://www.gismeteo.by/weather-minsk-4248/3-days/")
+                .then(response => response.json())
+                .then(() => div.innerText = response)
+        }
+    </script>
+</body>
+
+</html>
