@@ -22,17 +22,40 @@
         margin-top: 30px;
         margin-left: 30px;
     }
+    
+    .span {
+        position: relative;
+        width: 80px;
+        background-color: rgb(238, 238, 238);
+        float: left;
+        margin-top: 10px;
+        margin-left: 10px;
+        text-align: center;
+    }
+    
+    .button {
+        background-color: rgb(28, 139, 139);
+        position: absolute;
+        left: 1050px;
+        top: 450px;
+        width: 100px;
+        height: 30px;
+        border: none;
+        color: aliceblue;
+        font-size: 20px;
+    }
 </style>
 
 <body>
+    <button onclick="getForecast(1);" class="button">Next</button>
+    <button onclick="getForecast(-1);" class="button" style="left:900px">back</button>
     <div id="main">
 
     </div>
     <script>
         let i = 0;
-        for (let i = 0; i < 7; i++) {
-            start();
-        }
+        let information;
+        let next = 0;
 
 
         getForecast();
@@ -40,20 +63,73 @@
         function start() {
             i++
             let block = document.createElement('div');
+            let spanTop = document.createElement('span');
+            let spanMid = document.createElement('span');
+            let spanBot = document.createElement('span');
             block.setAttribute('ip', i);
             block.classList = 'blocks';
-            block.textContent = i;
+            spanTop.classList = 'span';
+            spanMid.classList = 'span';
+            spanBot.classList = 'span';
+
+            if (i % 4 == 0) {
+                spanTop.textContent = "Вечер";
+            }
+            if (i % 4 == 1) {
+                spanTop.textContent = "Ночь";
+            }
+            if (i % 4 == 2) {
+                spanTop.textContent = "Утро";
+            }
+            if (i % 4 == 3) {
+                spanTop.textContent = "День";
+            }
+            spanMid.innerHTML = "<img src='/Users/sashazelensky/PRJ/it-academy-FD2-108-22/src/s.zelensky/homework4/new/c3_r1_st.svg'>";
+            spanBot.textContent = (information[i].temperature);
 
             let main = document.getElementById('main');
             main.append(block);
+            block.append(spanTop);
+            block.append(spanMid);
+            block.append(spanBot);
+
 
         }
 
-        function getForecast() {
+        function getForecast(plus) {
             let div = document.getElementById('main');
-            fetch("https://www.gismeteo.by/weather-minsk-4248/3-days/")
+            if (plus == '+1' && next != 8) {
+                next++;
+            }
+            if (plus == '-1' && next != 0) {
+                next--;
+            }
+
+            fetch('https://weather-it-academy.herokuapp.com/weather?offset=' + next, {
+                    headers: {
+                        'Authorization': 'd.astreyko'
+                    }
+                })
                 .then(response => response.json())
-                .then(() => div.innerText = response)
+                //.then((data) => div.innerText = JSON.stringify(data))
+                .then((data) => information = data)
+                .then((data) => console.log(information))
+                .then(() => {
+                    document.getElementById('main').remove();
+                    let main = document.createElement('div');
+                    main.classList = 'main';
+                    main.setAttribute('id', 'main');
+
+                    document.body.append(main);
+                    for (let i = 0; i < 7; i++) {
+
+
+                        start();
+                    }
+                    i = 0;
+
+                })
+
         }
     </script>
 </body>
