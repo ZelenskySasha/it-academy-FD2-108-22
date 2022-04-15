@@ -1,5 +1,6 @@
 class Game {
     stert() {
+
         let area = document.getElementById('area');
         let tablesize = getComputedStyle(area).width;
         let table = document.createElement('table');

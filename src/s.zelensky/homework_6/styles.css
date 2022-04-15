@@ -1,0 +1,153 @@
+.calendar {
+    border-collapse: collapse;
+    margin: 10px 25px;
+    font-size: 0.9em;
+}
+
+.calendar thead tr {
+    font-weight: bold;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+.calendar tbody tr,
+.calendar tbody td {
+    border: 1px solid #dddddd;
+    vertical-align: top;
+}
+
+.calendar tbody td:hover {
+    background-color: rgb(204, 197, 197);
+    filter: brightness(120%);
+    font-size: larger;
+}
+
+.calendar thead td {
+    padding-top: 5px;
+    width: 100px;
+    height: 20px;
+}
+
+.calendar td {
+    padding: 14px 14px;
+    width: 100px;
+    height: 60px;
+}
+
+#main {
+    height: 700px;
+    width: 1300px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    border: 1px solid #dddddd;
+}
+
+#calendar {
+    height: 100%;
+    width: 1000px;
+    position: relative;
+    float: left;
+    border-right: 1px solid #dddddd;
+}
+
+#toDoList {
+    height: 100%;
+    width: 299px;
+    position: relative;
+    float: left;
+}
+
+#headMenu {
+    height: 60px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #dddddd;
+}
+
+.button {
+    position: relative;
+    float: left;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    margin-top: 15px;
+    margin-left: 33px;
+}
+
+.headdate {
+    position: relative;
+    float: left;
+    font-size: 30px;
+    vertical-align: middle;
+    padding: 15px;
+    margin-left: 10px;
+    margin-right: 25px;
+}
+
+.toDoListDate {
+    position: relative;
+    height: 200px;
+    font-size: 30px;
+    text-align: center;
+    top: 20px;
+}
+
+.notes {
+    margin: 10px;
+    height: 80px;
+    border-top: 3px solid #dddddd;
+    border-bottom: 3px solid #dddddd;
+    font-size: 20px;
+    text-align: left;
+}
+
+.notesLeftPart {
+    position: relative;
+    float: left;
+    top: 10px;
+    height: 80%;
+    width: 50px;
+    border-left: 6px solid sandybrown;
+    border-radius: 10%;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+
+.createNotes {
+    margin: 10px;
+    height: 80px;
+    border: 3px solid #dddddd;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 30px;
+    height: 60px;
+}
+
+#submitButton {
+    position: relative;
+    float: right;
+    font-size: 12px;
+    width: 50px;
+    height: 20px;
+    background-color: rgb(175, 255, 175);
+    border: none;
+    margin-right: 5px;
+    margin-top: 35px;
+}
+
+#textform {
+    position: relative;
+    height: 40px;
+    top: -20px;
+    margin-bottom: 30px;
+    left: 50px;
+    width: 210px;
+    text-align: center;
+}
+
+#dateform {
+    position: relative;
+    float: left;
+    bottom: 80px;
+}
