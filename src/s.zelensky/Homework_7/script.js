@@ -1,122 +1,3 @@
-function newGame(level) {
-    let gamearea = document.getElementById('gamearea');
-    let table = document.createElement('table');
-    let header = document.getElementById('header');
-    let wraper = document.getElementById('wraper');
-    table.setAttribute('id', 'table');
-    table.addEventListener('click', oneStep);
-    gamearea.append(table);
-
-    //alert(document.documentElement.clientHeight);
-    //document.documentElement.clientWidth - 120
-    steps = 0;
-    let amountX = 0;
-    let amountY = 0;
-    if (level == 'easy') {
-        amountX = 5;
-        amountY = 4;
-        timefrlooking = 3000;
-        CardsBackPic = 'photos/cardface.jpg';
-        CardsType = 'animals_';
-        header.style.backgroundColor = ('rgb(52, 196, 148)')
-        wraper.style.width = '80%'
-        wraper.style.left = '10%'
-        PoinysMultiply = 1;
-        bonusForMode = 100;
-    }
-
-    if (level == 'medium') {
-        amountX = 6;
-        amountY = 4;
-        timefrlooking = 2000;
-        CardsBackPic = 'photos/cardface_space.jpg';
-        CardsType = 'space_';
-        header.style.backgroundColor = ('rgb(42, 37, 77)')
-        wraper.style.width = '90%'
-        wraper.style.left = '5%'
-        PoinysMultiply = 2;
-        bonusForMode = 200;
-        ///background-color: ;
-        //cardface_town
-    }
-    if (level == 'hard') {
-        amountX = 7;
-        amountY = 4;
-        timefrlooking = 1000;
-        CardsBackPic = 'photos/cardface_town.jpg';
-        CardsType = 'town_';
-        header.style.backgroundColor = ('rgb(184, 176, 176)')
-        wraper.style.width = '96%'
-        wraper.style.left = '2%'
-        PoinysMultiply = 3;
-        bonusForMode = 400;
-    }
-    countToWin = (amountX * amountY) / 2;
-    let countarray = 0;
-    for (let y = 0; y < amountY; y++) {
-        arr.push([]);
-        for (let x = 0; x < amountX; x++) {
-            countarray++;
-            arr[y].push([]);
-            if (countarray > (amountY * amountX) / 2) { countarray = 1; }
-            arr[y][x] = countarray;
-        }
-    }
-    let arrhold = 0;
-    let arrholdreturn = 0;
-    let randomx = 0;
-    let randomy = 0;
-    let randomX = 0;
-    let randomY = 0;
-
-    for (let i = 0; i < 100; i++) {
-        randomx = Math.floor(Math.random() * amountX);
-        randomy = Math.floor(Math.random() * amountY);
-        randomX = Math.floor(Math.random() * amountX);
-        randomY = Math.floor(Math.random() * amountY);
-        arrhold = arr[randomy][randomx];
-        arrholdreturn = arr[randomY][randomX];
-        arr[randomY][randomX] = arrhold;
-        arr[randomy][randomx] = arrholdreturn;
-    }
-    console.table(arr);
-    let secondId = 0;
-    for (let i = 0; i < amountY; i++) {
-        let tr = document.createElement('tr');
-        table.append(tr);
-        for (let n = 0; n < amountX; n++) {
-            secondId++;
-            let td = document.createElement('td');
-            let divcard = document.createElement('div');
-            let cardFace = new Image();
-            cardFace.src = CardsBackPic;
-            cardFace.style.width = '100%'
-            cardFace.style.height = '100%'
-            cardFace.setAttribute('id', arr[i][n]);
-            cardFace.setAttribute('secondId', secondId);
-            //document.documentElement.clientWidth - 120
-            td.style.width = Math.floor(100 / amountX) + '%';
-            //td.style.height = '100px';
-            divcard.className = 'divcards';
-            tr.append(td);
-            td.append(divcard);
-            divcard.append(cardFace);
-        }
-
-
-    }
-
-
-    if (OpenMode) {
-        bonusForClosedCard = 200
-        OpenAllCards();
-    } else {
-        gamepause = false;
-        bonusForClosedCard = 200;
-    }
-
-}
-
 let animatiom_period = true;
 let arr = [];
 let cardId = 0;
@@ -144,35 +25,131 @@ let bonusForMode = 0;
 let totaltime = 0;
 let bonusForClosedCard = 0;
 let TotalPointsForThisGame = 0;
+let resultArr = [];
+let newtimer;
+
+function newGame(level) {
+    let gamearea = document.getElementById('gamearea');
+    let table = document.createElement('table');
+    let header = document.getElementById('header');
+    let wraper = document.getElementById('wraper');
+    let arrhold = 0;
+    let arrholdreturn = 0;
+    let randomx = 0;
+    let randomy = 0;
+    let randomX = 0;
+    let randomY = 0;
+    table.setAttribute('id', 'table');
+    table.addEventListener('click', oneStep);
+    gamearea.append(table);
+    steps = 0;
+    let amountX = 0;
+    let amountY = 0;
+    if (level == 'easy') {
+        amountX = 5;
+        amountY = 4;
+        timefrlooking = 3000;
+        CardsBackPic = 'photos/cardface.jpg';
+        CardsType = 'animals_';
+        header.style.backgroundColor = ('rgb(52, 196, 148)');
+        wraper.style.width = '80%';
+        wraper.style.left = '10%';
+        PoinysMultiply = 1;
+        bonusForMode = 100;
+    }
+    if (level == 'medium') {
+        amountX = 6;
+        amountY = 4;
+        timefrlooking = 2000;
+        CardsBackPic = 'photos/cardface_space.jpg';
+        CardsType = 'space_';
+        header.style.backgroundColor = ('rgb(42, 37, 77)');
+        wraper.style.width = '90%';
+        wraper.style.left = '5%';
+        PoinysMultiply = 2;
+        bonusForMode = 200;
+    }
+    if (level == 'hard') {
+        amountX = 7;
+        amountY = 4;
+        timefrlooking = 1000;
+        CardsBackPic = 'photos/cardface_town.jpg';
+        CardsType = 'town_';
+        header.style.backgroundColor = ('rgb(184, 176, 176)');
+        wraper.style.width = '96%';
+        wraper.style.left = '2%';
+        PoinysMultiply = 3;
+        bonusForMode = 400;
+    }
+    countToWin = (amountX * amountY) / 2;
+    let countarray = 0;
+    for (let y = 0; y < amountY; y++) {
+        arr.push([]);
+        for (let x = 0; x < amountX; x++) {
+            countarray++;
+            arr[y].push([]);
+            if (countarray > (amountY * amountX) / 2) { countarray = 1; }
+            arr[y][x] = countarray;
+        }
+    }
+    for (let i = 0; i < 100; i++) {
+        randomx = Math.floor(Math.random() * amountX);
+        randomy = Math.floor(Math.random() * amountY);
+        randomX = Math.floor(Math.random() * amountX);
+        randomY = Math.floor(Math.random() * amountY);
+        arrhold = arr[randomy][randomx];
+        arrholdreturn = arr[randomY][randomX];
+        arr[randomY][randomX] = arrhold;
+        arr[randomy][randomx] = arrholdreturn;
+    }
+    let secondId = 0;
+    for (let i = 0; i < amountY; i++) {
+        let tr = document.createElement('tr');
+        table.append(tr);
+        for (let n = 0; n < amountX; n++) {
+            secondId++;
+            let td = document.createElement('td');
+            let divcard = document.createElement('div');
+            let cardFace = new Image();
+            cardFace.src = CardsBackPic;
+            cardFace.style.width = '100%';
+            cardFace.style.height = '100%';
+            cardFace.setAttribute('id', arr[i][n]);
+            cardFace.setAttribute('secondId', secondId);
+            td.style.width = Math.floor(100 / amountX) + '%';
+            divcard.className = 'divcards';
+            tr.append(td);
+            td.append(divcard);
+            divcard.append(cardFace);
+        }
+    }
+    if (OpenMode) {
+        bonusForClosedCard = 200;
+        OpenAllCards();
+    } else {
+        gamepause = false;
+        bonusForClosedCard = 200;
+    }
+}
 
 function oneStep(event) {
     if (animatiom_period && amounOfCardSelected != 2 && !gamepause) {
         animatiom_period = false;
         setTimeout(() => {
             animatiom_period = true;
-
         }, 610);
-
         if (event.target.tagName == 'IMG' &&
             event.target.getAttribute("secondId") != 0 &&
             SecondIdCheak != event.target.getAttribute("secondId") &&
             event.target.getAttribute("secondId") != 0 &&
             !menuIsOpened) {
             amounOfCardSelected++;
-            //if (cardId == event.target.id && SecondIdCheak != event.target.getAttribute("secondId")) {
-            //    document.getElementById(cardId).setAttribute('secondId', 0);
-            //    document.getElementById(cardId).id = 0;
-            //    document.getElementById(cardId).setAttribute('secondId', 0);
-            //    document.getElementById('0').id = cardId;
-            // }
             cardId = event.target.id;
             IdCheak = cardId;
             if (firstCard == 0) {
                 firstCard = event.target;
             } else { SecondCard = event.target; }
-
             SecondIdCheak = event.target.getAttribute("secondId");
-            console.log(event.target.id)
             event.target.className = 'rotateZ';
             setTimeout(() => {
                 if (document.getElementById(cardId).getAttribute("secondId") == SecondIdCheak) {
@@ -187,30 +164,24 @@ function oneStep(event) {
                 if (amounOfCardSelected == 2) {
                     cheakIfItsMatch();
                 }
-
             }, 305)
-
         }
     }
 }
 
 function cheakIfItsMatch() {
-    // document.getElementById(cardId).classList.remove('rotateZback');
-    // document.getElementById(cardId).classList.remove('rotateZ');
     setTimeout(() => {
         AddSteps();
         if (firstCard.id == SecondCard.id) {
             combo++;
             firstCard.className = 'CardRemove';
-            //CardRemove
             SecondCard.className = 'CardRemove';
-            //amountofcrossedcards
             amountofcrossedcards++;
             setTimeout(() => {
                 firstCard.style.opacity = "0";
                 SecondCard.style.opacity = "0";
                 firstCard.setAttribute('secondId', 0);
-                SecondCard.setAttribute('secondId', 0)
+                SecondCard.setAttribute('secondId', 0);
                 amounOfCardSelected = 0;
                 firstCard = 0;
                 SecondCard = 0;
@@ -218,15 +189,13 @@ function cheakIfItsMatch() {
                 if (amountofcrossedcards == countToWin) {
                     GameOver();
                 }
-            }, 305)
-
+            }, 305);
         } else {
             combo = 1;
             firstCard.classList.remove('rotateZback');
             SecondCard.classList.remove('rotateZback');
             firstCard.className = 'rotateZbackFlip';
             SecondCard.className = 'rotateZbackFlip';
-            //rotateZFlipToNormal
             setTimeout(() => {
                 firstCard.classList.remove('rotateZbackFlip');
                 SecondCard.classList.remove('rotateZbackFlip');
@@ -239,30 +208,21 @@ function cheakIfItsMatch() {
                     firstCard = 0;
                     SecondCard = 0;
                     SecondIdCheak = 0;
-                }, 305)
-
+                }, 305);
             }, 305);
         }
-        //  document.getElementById(cardId).className = 'rotateZ';
-    }, 1000)
-
+    }, 1000);
 }
-
-
-
 
 function createFrameForAllDiv() {
     let headMenu = document.createElement('button');
     let header = document.createElement('div');
-
-    //headMenu.id = 'headMenu';
     headMenu.textContent = 'Menu';
     headMenu.setAttribute('id', 'menu');
     header.setAttribute('id', 'header');
     document.body.append(header);
-    headMenu.addEventListener('click', openMenu)
+    headMenu.addEventListener('click', openMenu);
     header.append(headMenu);
-    //table.getElementsByTagName("td");
     let wraper = document.createElement('div');
     wraper.setAttribute('id', 'wraper');
     document.body.append(wraper);
@@ -274,18 +234,13 @@ function createFrameForAllDiv() {
 }
 
 function OpenAllCards() {
-    // alert('d');
     let elements = document.getElementsByTagName('img');
-
     for (let elem of elements) {
-        //firstCard.src = 'photos/cardface.jpg';
-
         elem.className = 'rotateZ';
-        //rotateZback
         setTimeout(() => {
             elem.className = 'rotateZback';
             elem.src = 'photos/' + CardsType + elem.id + '.jpg';
-            setTimeout(() => {
+            elem.onload = setTimeout(() => {
                 elem.className = 'rotateZbackFlip';
                 setTimeout(() => {
                     elem.className = 'rotateZFlipToNormal';
@@ -294,21 +249,17 @@ function OpenAllCards() {
                 }, 303);
             }, timefrlooking);
         }, 303);
-
-
     }
 }
-//NewGame
-//NewGame
+
 function openMenu(ValueForStart) {
     if (!gamepause || ValueForStart == 'NewGame') {
         menuIsOpened = true;
         if (!document.getElementById('openedmenu')) {
             let menu = document.createElement('div');
             let title = document.createElement('div');
-
+            let inputstring = '';
             let close = document.createElement('div');
-
             let createnewgame = document.createElement('div');
             let levelconteiner = document.createElement('div');
             let levelEasy = document.createElement('div');
@@ -317,12 +268,12 @@ function openMenu(ValueForStart) {
             let levellabel = document.createElement('div');
             let switchcards = document.createElement('div');
             let switchcardsOpened = document.createElement('div');
+            let statistics = document.createElement('div');
             document.body.append(menu);
             menu.append(title);
             if (ValueForStart != 'NewGame') {
                 menu.append(close);
             }
-
             menu.append(createnewgame);
             menu.append(levelconteiner);
             menu.append(switchcards);
@@ -331,93 +282,105 @@ function openMenu(ValueForStart) {
             levelconteiner.append(levelEasy);
             levelconteiner.append(levelMedium);
             levelconteiner.append(levelDifficult);
+            menu.append(statistics);
             switchcardsOpened.setAttribute('id', 'switchcardsOpened');
             switchcards.setAttribute('id', 'switchcards');
             menu.setAttribute('id', 'openedmenu');
+            statistics.setAttribute('id', 'statistics');
             levelconteiner.setAttribute('id', 'levelconteiner');
             if (document.getElementById('header')) {
                 levelconteiner.style.backgroundColor = document.getElementById('header').style.backgroundColor;
             } else { levelconteiner.style.backgroundColor = '(rgb(165, 165, 165)'; }
-
             levelEasy.setAttribute('id', 'levelEasy');
             levelMedium.setAttribute('id', 'levelMedium');
             levelDifficult.setAttribute('id', 'levelDifficult');
             title.setAttribute('id', 'title');
-
             close.setAttribute('id', 'close');
-
-
             levellabel.setAttribute('id', 'levellabel');
             createnewgame.setAttribute('id', 'createnewgame');
-            //battonformenu
             levelEasy.className = 'battonformenu';
             levelMedium.className = 'battonformenu';
             levelDifficult.className = 'battonformenu';
             if (ValueForStart != 'NewGame') { close.textContent = 'Close'; }
-
             title.textContent = 'Menu';
             levelEasy.textContent = 'Easy';
             levelMedium.textContent = 'Medium';
             levellabel.textContent = 'Level';
             levelDifficult.textContent = 'Difficult';
             createnewgame.textContent = 'New game';
-            switchcardsOpened.textContent = 'Opened cards'
-            switchcards.textContent = 'Closed cards'
+            switchcardsOpened.textContent = 'Opened cards';
+            switchcards.textContent = 'Closed cards';
             switchcardsOpened.style.backgroundColor = 'rgb(115, 223, 164)';
+            if (localStorage.getItem('gamestatistics')) {
+                resultArr = JSON.parse(localStorage.getItem('gamestatistics'));
+                resultArr.sort((a, b) => b.points - a.points);
+            }
+            for (let i = 0; i < 10; i++) {
+                let divresult = document.createElement('div');
+                divresult.className = 'divresult';
+                statistics.append(divresult);
+                divresult.textContent = i + 1;
+                if (resultArr[i]) {
+                    inputstring = i + 1 + ' | ' + resultArr[i].points + ' points; ' +
+                        resultArr[i].time + ' time; ' +
+                        resultArr[i].steps + ' steps.';
+                    divresult.textContent = inputstring;
+                }
+                if (i == 0) {
+                    divresult.style.backgroundColor = ('rgb(255,215,0)');
+                }
+                if (i == 1) {
+                    divresult.style.backgroundColor = ('rgb(191,193,194)');
+                }
+                if (i == 2) {
+                    divresult.style.backgroundColor = ('rgb(205, 127, 50)');
+                }
+            }
             if (ValueForStart != 'NewGame') {
                 close.addEventListener('click', () => {
                     menuIsOpened = false;
                     menu.remove();
                 })
-            }
-
+            };
             levelEasy.addEventListener('click', () => {
                 levelOfTheGame = 'easy'
                 levelEasy.classList.add('selectedmenu');
                 levelMedium.className = 'battonformenu';
                 levelDifficult.className = 'battonformenu';
-
-            })
+            });
             switchcards.addEventListener('click', () => {
                 switchcards.style.backgroundColor = 'rgb(115, 223, 164)';
                 switchcardsOpened.style.backgroundColor = 'rgb(252, 217, 124)';
                 OpenMode = false;
-
-            })
+            });
             switchcardsOpened.addEventListener('click', () => {
                 switchcardsOpened.style.backgroundColor = 'rgb(115, 223, 164)';
                 switchcards.style.backgroundColor = 'rgb(252, 217, 124)';
                 OpenMode = true;
-
-            })
+            });
             levelMedium.addEventListener('click', () => {
-                levelOfTheGame = 'medium'
+                levelOfTheGame = 'medium';
                 levelMedium.classList.add('selectedmenu');
                 levelEasy.className = 'battonformenu';
                 levelDifficult.className = 'battonformenu';
             })
             levelDifficult.addEventListener('click', () => {
-                levelOfTheGame = 'hard'
+                levelOfTheGame = 'hard';
                 levelDifficult.classList.add('selectedmenu');
                 levelEasy.className = 'battonformenu';
                 levelMedium.className = 'battonformenu';
             })
             levelMedium.click();
-
             createnewgame.addEventListener('click', () => {
                 SetZero();
                 createFrameForAllDiv()
-            })
+            });
         }
     }
 }
 
-
 function CreateCauntMenu() {
-
     let header = document.getElementById('header');
-
-
     let topmenu = document.createElement('div');
     let counter = document.createElement('div');
     let timer = document.createElement('div');
@@ -439,27 +402,19 @@ function CreateCauntMenu() {
     counter.textContent = '000000';
     steps.textContent = '000';
     timer.style.backgroundColor = ('rgb(255,215,0)');
-
-
     gameEnd = false;
-
     clearInterval(newtimer);
     newtimer = setInterval(function() {
         if (!menuIsOpened && !gamepause) {
             time++;
-
         }
-
         seconds = time % 60;
         minutes = Math.floor(time / 60);
-
         if (minutes < 1) {
             timer.style.backgroundColor = ('rgb(255,215,0)');
-
         }
         if (minutes < 3 && minutes > 1) {
             timer.style.backgroundColor = ('rgb(191,193,194)');
-
         }
         if (minutes > 3) {
             timer.style.backgroundColor = ('rgb(205, 127, 50)');
@@ -467,16 +422,12 @@ function CreateCauntMenu() {
         if (seconds < 10) { seconds = '0' + seconds; }
         if (minutes < 10) { minutes = '0' + minutes; }
         timer.textContent = minutes + ':' + seconds;
-
         if (minutes == 60 || gameEnd) {
             clearInterval(newtimer);
             gameEnd = false;
         }
-        // AddPoints(10);
     }, 1000);
-
 }
-
 
 function AddPoints(n) {
 
@@ -495,23 +446,17 @@ function AddPoints(n) {
     for (let i = 0; i < 5 - points.toString().length; i++) {
         result = result + '0'
     }
-
     if (combo < 3) {
         bonusShow.textContent = '+' + bonus;
-
     } else {
         bonusShow.textContent = '+' + Math.floor(bonus * (0.8 + (0.1 * combo))) + '*(' + (0.8 + (0.1 * combo)).toFixed(1) + ')';
     }
-
     result = result + points;
     counter.textContent = result;
     setTimeout(() => {
-
         bonusShow.classList.add('BonusRemove');
         setTimeout(() => { bonusShow.remove(); }, 1500)
-
-    }, 4000)
-    console.log(combo);
+    }, 4000);
 }
 
 function AddSteps() {
@@ -519,27 +464,23 @@ function AddSteps() {
     if (steps < 1000) { steps++; }
     let stepsdiv = document.getElementById('steps');
     for (let i = 0; i < 3 - steps.toString().length; i++) {
-        result = result + '0'
+        result = result + '0';
     }
     result = result + steps;
     stepsdiv.textContent = result;
 }
 
 function GameOver() {
-    //SetZero();
     SetZero();
     let gameresult = document.createElement('div');
     let gameover = document.createElement('div');
     let next = document.createElement('div');
     gameresult.setAttribute('id', 'gameresult')
     gameover.setAttribute('id', 'gameover')
-
     document.body.append(gameresult);
     gameresult.append(gameover);
-
     gameover.textContent = 'GAME OVER';
     for (let i = 0; i < 6; i++) {
-        // if (reultOfTheGame) { reultOfTheGame.remove(); }
         let reultOfTheGame = document.createElement('div');
         gameresult.append(reultOfTheGame);
         reultOfTheGame.className = "reultOfTheGame";
@@ -565,16 +506,22 @@ function GameOver() {
                 Math.floor(5000 / totaltime) + Math.floor(1000 / steps) + points;
             reultOfTheGame.textContent = 'Total: ' + TotalPointsForThisGame;
         }
-
-
     }
+    let dataObj = {
+        points: TotalPointsForThisGame,
+        steps: steps,
+        time: totaltime,
+        bonusForMode: bonusForMode
+    };
+    resultArr.push(dataObj);
+    localStorage.setItem('gamestatistics', JSON.stringify(resultArr));
     gameresult.append(next);
     next.setAttribute('id', 'next');
     next.textContent = 'next';
     next.addEventListener('click', () => {
         gameresult.remove();
         openMenu('NewGame');
-    })
+    });
 }
 
 function SetZero() {
@@ -588,7 +535,6 @@ function SetZero() {
     if (document.getElementById('wraper')) {
         document.getElementById('wraper').remove();
     }
-
     animatiom_period = true;
     arr = [];
     cardId = 0;
@@ -597,7 +543,6 @@ function SetZero() {
     amounOfCardSelected = 0;
     firstCard = 0;
     SecondCard = 0;
-    //OpenMode = true;
     timefrlooking = 0;
     gamepause = true;
     countToWin = 0;
@@ -606,7 +551,3 @@ function SetZero() {
     totaltime = time;
     time = 0;
 }
-//let steps = 0;
-//let combo = 0;
-//setTimeout(GameOver, 3000)
-let newtimer;

@@ -1,379 +1,398 @@
-#wraper {
-    position: relative;
-    width: 80%;
-    height: 700px;
-    left: 10%;
-    top: 20px;
-}
-
-@media only screen and (min-width: 921px) and (max-width: 1121px) {
-    table {
-        width: 90%;
-    }
-}
-
-@media only screen and (min-width: 1100px) and (max-width: 1321px) {
-    table {
+    #wraper {
+        position: relative;
         width: 80%;
+        height: 700px;
+        left: 10%;
+        top: 20px;
     }
-}
-
-@media only screen and (min-width: 1300px) and (max-width: 1521px) {
+    
+    @media only screen and (min-width: 921px) and (max-width: 1121px) {
+        table {
+            width: 90%;
+        }
+    }
+    
+    @media only screen and (min-width: 1100px) and (max-width: 1321px) {
+        table {
+            width: 80%;
+        }
+    }
+    
+    @media only screen and (min-width: 1300px) and (max-width: 1521px) {
+        table {
+            width: 77%;
+        }
+    }
+    
+    #header {
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        background-color: rgb(52, 196, 148);
+        margin: 0;
+        z-index: 3;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    #gamearea {
+        width: 100%;
+        position: relative;
+        top: 100px;
+    }
+    
+    .divcards {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        float: left;
+    }
+    
     table {
-        width: 77%;
+        margin-left: auto;
+        margin-right: auto;
     }
-}
-
-#header {
-    position: fixed;
-    width: 100%;
-    height: 100px;
-    background-color: rgb(52, 196, 148);
-    margin: 0;
-    z-index: 3;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-}
-
-#gamearea {
-    width: 100%;
-    position: relative;
-    top: 100px;
-}
-
-.divcards {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    float: left;
-}
-
-table {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.rotateZ {
-    animation-duration: 0.3s;
-    animation-name: slidein;
-}
-
-@keyframes slidein {
-    from {
-        transform: rotateY(-180deg);
+    
+    .rotateZ {
+        animation-duration: 0.3s;
+        animation-name: slidein;
     }
-    to {
-        transform: rotateY(-90deg);
+    
+    @keyframes slidein {
+        from {
+            transform: rotateY(-180deg);
+        }
+        to {
+            transform: rotateY(-90deg);
+        }
     }
-}
-
-.rotateZback {
-    animation-duration: 0.3s;
-    animation-name: slideinhide;
-}
-
-@keyframes slideinhide {
-    from {
-        transform: rotateY(-90deg);
+    
+    .rotateZback {
+        animation-duration: 0.3s;
+        animation-name: slideinhide;
     }
-    to {
-        transform: rotateY(-0deg);
+    
+    @keyframes slideinhide {
+        from {
+            transform: rotateY(-90deg);
+        }
+        to {
+            transform: rotateY(-0deg);
+        }
     }
-}
-
-.rotateZbackFlip {
-    animation-duration: 0.3s;
-    animation-name: slideinhideFlip;
-}
-
-@keyframes slideinhideFlip {
-    from {
-        transform: rotateY(0deg);
+    
+    .rotateZbackFlip {
+        animation-duration: 0.3s;
+        animation-name: slideinhideFlip;
     }
-    to {
-        transform: rotateY(-90deg);
+    
+    @keyframes slideinhideFlip {
+        from {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(-90deg);
+        }
     }
-}
-
-.rotateZFlipToNormal {
-    animation-duration: 0.3s;
-    animation-name: slideinToNoraml;
-}
-
-@keyframes slideinToNoraml {
-    from {
-        transform: rotateY(-90deg);
+    
+    .rotateZFlipToNormal {
+        animation-duration: 0.3s;
+        animation-name: slideinToNoraml;
     }
-    to {
-        transform: rotateY(-0deg);
+    
+    @keyframes slideinToNoraml {
+        from {
+            transform: rotateY(-90deg);
+        }
+        to {
+            transform: rotateY(-0deg);
+        }
     }
-}
-
-.CardRemove {
-    animation-duration: 0.3s;
-    animation-name: removingcard;
-}
-
-@keyframes removingcard {
-    from {
-        opacity: 1;
+    
+    .CardRemove {
+        animation-duration: 0.3s;
+        animation-name: removingcard;
     }
-    to {
-        opacity: 0;
+    
+    @keyframes removingcard {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
     }
-}
-
-.invisablecard {
-    display: none;
-}
-
-#menu {
-    background-color: rgb(236, 242, 138);
-    padding: px;
-    margin: 20px;
-    border: none;
-    width: 100px;
-    text-align: center;
-    font-size: 20px;
-    height: 30px;
-}
-
-#menu:hover {
-    background-color: rgb(225, 235, 39);
-    font-size: 22px;
-}
-
-#openedmenu {
-    width: 500px;
-    height: 650px;
-    position: absolute;
-    top: 0px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    background-color: rgb(255, 255, 255);
-    z-index: 4;
-    border: 6px solid rgb(0, 0, 0);
-}
-
-#close {
-    width: 60px;
-    height: 25px;
-    position: relative;
-    background-color: rgb(244, 164, 82);
-    z-index: 5;
-    float: right;
-    margin: 10px;
-    border-radius: 15%;
-    color: white;
-    font-size: 20px;
-    top: -70px;
-    padding: 3px;
-    text-align: center;
-}
-
-#title {
-    width: 100px;
-    height: 50px;
-    position: relative;
-    z-index: 5;
-    text-align: center;
-    font-size: 50px;
-    padding-left: 200px;
-    margin: 10px;
-}
-
-#close:hover {
-    background-color: rgb(247, 146, 45);
-    font-size: 22px;
-}
-
-#createnewgame {
-    width: 100px;
-    height: 30px;
-    position: relative;
-    background-color: rgb(252, 217, 124);
-    font-size: 22px;
-    padding: 10px;
-    top: 500px;
-    left: 350px;
-}
-
-#levelconteiner {
-    width: 500px;
-    height: 100px;
-    position: relative;
-    background-color: rgb(48, 196, 148);
-    margin: 10px;
-    text-align: center;
-    font-size: 20px;
-    right: 10px;
-}
-
-#levellabel {
-    font-size: 30px;
-    color: rgb(238, 240, 240);
-}
-
-.battonformenu {
-    width: 100px;
-    height: 30px;
-    position: relative;
-    background-color: rgb(252, 217, 124);
-    margin: 10px;
-    float: left;
-    margin-left: 48px;
-}
-
-.battonformenu:hover {
-    opacity: 0.9;
-}
-
-.selectedmenu {
-    background-color: rgb(115, 223, 164);
-    font-size: 22px;
-    width: 96px;
-    border: 2px solid black;
-}
-
-#switchcards {
-    width: 130px;
-    height: 30px;
-    position: relative;
-    background-color: rgb(252, 217, 124);
-    font-size: 22px;
-    padding: 10px;
-    top: 330px;
-    left: 20px;
-    text-align: center;
-}
-
-#switchcards:hover,
-#switchcardsOpened:hover {
-    opacity: 0.7;
-}
-
-#switchcardsOpened {
-    width: 130px;
-    height: 30px;
-    position: relative;
-    background-color: rgb(252, 217, 124);
-    font-size: 22px;
-    padding: 10px;
-    top: 280px;
-    left: 180px;
-    text-align: center;
-}
-
-#topmenu {
-    position: relative;
-    height: 50px;
-    width: 380px;
-    float: right;
-    margin: 20px;
-    margin-bottom: 0px;
-}
-
-.blockMenu {
-    width: 100px;
-    height: 30px;
-    margin-right: 30px;
-    background-color: white;
-    border: 2px solid black;
-    position: relative;
-    float: right;
-}
-
-#timer {
-    font-size: 28px;
-    text-align: center;
-    color: rgb(26, 26, 26);
-}
-
-#counter {
-    font-size: 28px;
-    text-align: center;
-    color: rgb(26, 26, 26);
-}
-
-#steps {
-    font-size: 28px;
-    text-align: center;
-    color: rgb(26, 26, 26);
-    width: 50px;
-}
-
-#bonusinput {
-    position: relative;
-    width: 100px;
-    height: 3px;
-    float: right;
-    top: -10px;
-    right: 30px;
-}
-
-.bonusShow {
-    height: 20px;
-    width: 150px;
-    color: rgb(235, 41, 41);
-    font-size: 28px;
-    margin-top: 20px;
-}
-
-.BonusRemove {
-    animation-duration: 1.5s;
-    animation-name: rembonus;
-}
-
-@keyframes rembonus {
-    from {
-        opacity: 1;
+    
+    .invisablecard {
+        display: none;
     }
-    to {
-        opacity: 0;
+    
+    #menu {
+        background-color: rgb(236, 242, 138);
+        padding: px;
+        margin: 20px;
+        border: none;
+        width: 100px;
+        text-align: center;
+        font-size: 20px;
+        height: 30px;
     }
-}
-
-#gameresult {
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    top: 0px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    background-color: rgb(255, 255, 255);
-    z-index: 4;
-    border: 6px solid rgb(0, 0, 0);
-}
-
-#gameover {
-    text-align: center;
-    padding: 20px;
-    font-size: 30px;
-}
-
-.reultOfTheGame {
-    padding: 4px;
-    padding-left: 10px;
-}
-
-#next {
-    position: relative;
-    border: 3px solid;
-    float: right;
-    padding: 3px;
-    width: 50px;
-    margin: 10px;
-    margin-top: 30px;
-    text-align: center;
-}
-
-#next:hover {
-    font-size: 20px;
-}
+    
+    #menu:hover {
+        background-color: rgb(225, 235, 39);
+        font-size: 22px;
+    }
+    
+    #openedmenu {
+        width: 500px;
+        height: 650px;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background-color: rgb(255, 255, 255);
+        z-index: 4;
+        border: 6px solid rgb(0, 0, 0);
+    }
+    
+    #close {
+        width: 60px;
+        height: 25px;
+        position: relative;
+        background-color: rgb(244, 164, 82);
+        z-index: 5;
+        float: right;
+        margin: 10px;
+        border-radius: 15%;
+        color: white;
+        font-size: 20px;
+        top: -70px;
+        padding: 3px;
+        text-align: center;
+    }
+    
+    #title {
+        width: 100px;
+        height: 50px;
+        position: relative;
+        z-index: 5;
+        text-align: center;
+        font-size: 50px;
+        padding-left: 190px;
+        margin: 10px;
+    }
+    
+    #close:hover {
+        background-color: rgb(247, 146, 45);
+        font-size: 22px;
+    }
+    
+    #createnewgame {
+        width: 100px;
+        height: 30px;
+        position: relative;
+        background-color: rgb(252, 217, 124);
+        font-size: 22px;
+        padding: 10px;
+        top: 500px;
+        left: 350px;
+    }
+    
+    #levelconteiner {
+        width: 500px;
+        height: 100px;
+        position: relative;
+        background-color: rgb(48, 196, 148);
+        margin: 10px;
+        text-align: center;
+        font-size: 20px;
+        right: 10px;
+    }
+    
+    #levellabel {
+        font-size: 30px;
+        color: rgb(238, 240, 240);
+    }
+    
+    .battonformenu {
+        width: 100px;
+        height: 30px;
+        position: relative;
+        background-color: rgb(252, 217, 124);
+        margin: 10px;
+        float: left;
+        margin-left: 48px;
+    }
+    
+    .battonformenu:hover {
+        opacity: 0.9;
+    }
+    
+    .selectedmenu {
+        background-color: rgb(115, 223, 164);
+        font-size: 22px;
+        width: 96px;
+        border: 2px solid black;
+    }
+    
+    #switchcards {
+        width: 130px;
+        height: 30px;
+        position: relative;
+        background-color: rgb(252, 217, 124);
+        font-size: 22px;
+        padding: 10px;
+        top: 330px;
+        left: 20px;
+        text-align: center;
+    }
+    
+    #switchcards:hover,
+    #switchcardsOpened:hover {
+        opacity: 0.7;
+    }
+    
+    #switchcardsOpened {
+        width: 130px;
+        height: 30px;
+        position: relative;
+        background-color: rgb(252, 217, 124);
+        font-size: 22px;
+        padding: 10px;
+        top: 280px;
+        left: 180px;
+        text-align: center;
+    }
+    
+    #topmenu {
+        position: relative;
+        height: 50px;
+        width: 380px;
+        float: right;
+        margin: 20px;
+        margin-bottom: 0px;
+    }
+    
+    .blockMenu {
+        width: 100px;
+        height: 30px;
+        margin-right: 30px;
+        background-color: white;
+        border: 2px solid black;
+        position: relative;
+        float: right;
+    }
+    
+    #timer {
+        font-size: 28px;
+        text-align: center;
+        color: rgb(26, 26, 26);
+    }
+    
+    #counter {
+        font-size: 28px;
+        text-align: center;
+        color: rgb(26, 26, 26);
+    }
+    
+    #steps {
+        font-size: 28px;
+        text-align: center;
+        color: rgb(26, 26, 26);
+        width: 50px;
+    }
+    
+    #bonusinput {
+        position: relative;
+        width: 100px;
+        height: 3px;
+        float: right;
+        top: -10px;
+        right: 30px;
+    }
+    
+    .bonusShow {
+        height: 20px;
+        width: 150px;
+        color: rgb(235, 41, 41);
+        font-size: 28px;
+        margin-top: 20px;
+    }
+    
+    .BonusRemove {
+        animation-duration: 1.5s;
+        animation-name: rembonus;
+    }
+    
+    @keyframes rembonus {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+    
+    #gameresult {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background-color: rgb(255, 255, 255);
+        z-index: 4;
+        border: 6px solid rgb(0, 0, 0);
+    }
+    
+    #gameover {
+        text-align: center;
+        padding: 20px;
+        font-size: 30px;
+    }
+    
+    .reultOfTheGame {
+        padding: 4px;
+        padding-left: 10px;
+    }
+    
+    #next {
+        position: relative;
+        border: 3px solid;
+        float: right;
+        padding: 3px;
+        width: 50px;
+        margin: 10px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+    #next:hover {
+        font-size: 20px;
+    }
+    
+    #statistics {
+        width: 80%;
+        height: 270px;
+        background-color: rgb(223, 235, 231);
+        border: 3px solid black;
+        left: 10%;
+        position: relative;
+        bottom: 80px;
+        overflow-y: scroll;
+    }
+    
+    .divresult {
+        height: 30px;
+        background-color: white;
+        padding: 10px;
+        border-bottom: 2px solid black;
+        font-size: 24px;
+    }
